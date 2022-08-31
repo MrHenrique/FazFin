@@ -7,7 +7,6 @@ import CadastroFaz from "../pages/CadastroFaz";
 import StackRoutes from "../Routes/stackRoutes";
 
 const Drawer = createDrawerNavigator();
-
 function Routes() {
   return (
     <Drawer.Navigator
@@ -42,8 +41,7 @@ function Routes() {
         name="CadastroFaz"
         component={CadastroFaz}
         options={{
-          title: "Cadastro Fazenda",
-
+          title: "Cadastro de fazendas",
           drawerIcon: ({ focused, size, color }) => (
             <Ionicons
               name={focused ? "person-add" : "person-add-outline"}
