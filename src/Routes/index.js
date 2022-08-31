@@ -1,7 +1,7 @@
 import React from "react";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 
-import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { Ionicons } from "@expo/vector-icons";
 
 import CadastroFaz from "../pages/CadastroFaz";
 import StackRoutes from "../Routes/stackRoutes";
@@ -30,8 +30,8 @@ function Routes() {
         options={{
           title: "Bem vindo.",
           drawerIcon: ({ focused, size, color }) => (
-            <MaterialCommunityIcons
-              name={focused ? "movie-open" : "movie-outline"}
+            <Ionicons
+              name={focused ? "home" : "home-outline"}
               size={size}
               color={color}
             />
@@ -45,8 +45,8 @@ function Routes() {
           title: "Cadastro Fazenda",
 
           drawerIcon: ({ focused, size, color }) => (
-            <MaterialCommunityIcons
-              name={focused ? "archive" : "archive-outline"}
+            <Ionicons
+              name={focused ? "person-add" : "person-add-outline"}
               size={size}
               color={color}
             />
