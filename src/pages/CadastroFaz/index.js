@@ -50,7 +50,7 @@ function CadastroFaz() {
           <CampoTexto
             onChangeText={setTipoprod}
             value={tipoprod}
-            placeholder="Qual o nome da sua Fazenda?"
+            placeholder="Ex: Pecuaria Leiteira"
           ></CampoTexto>
           <BotaoPress>
             <TituloBotao>{"Cadastrar"}</TituloBotao>

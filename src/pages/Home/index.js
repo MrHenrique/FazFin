@@ -1,5 +1,11 @@
 import React from "react";
-import { View, Text, ImageBackground, Pressable } from "react-native";
+import {
+  View,
+  Text,
+  ImageBackground,
+  Pressable,
+  SafeAreaView,
+} from "react-native";
 import {
   Container,
   Title,

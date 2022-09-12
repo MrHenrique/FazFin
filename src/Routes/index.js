@@ -17,7 +17,7 @@ function Routes() {
           backgroundColor: "#004513",
           paddingTop: 20,
         },
-
+        drawerPosition: "right",
         drawerActiveBackgroundColor: "#0F6D00",
         drawerActiveTintColor: "#fff",
         drawerInactiveTintColor: "#FFF",
