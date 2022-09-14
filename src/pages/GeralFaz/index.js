@@ -32,7 +32,7 @@ function GeralFaz({ navigation }) {
           </TextoBanner>
           <TextoBanner>{"Total Mensal: R$ 1500,00"}</TextoBanner>
         </BannerButton>
-        <BotaoPress2>
+        <BotaoPress2 onPress={() => navigation.navigate("CadastroReb")}>
           <TituloBotao>{"Cadastrar ou modificar rebanhos"}</TituloBotao>
         </BotaoPress2>
         <Texto>Selecionar rebanho</Texto>

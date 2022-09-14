@@ -10,5 +10,11 @@ export const fazendas = [
         code: '2',
         owner: 'Maria de Lourdes',
         type: 'Pecuaria Leiteira',
+    },
+    {
+        name: 'Fazenda Gameleira',
+        code: '3',
+        owner: 'Maria de Lourdes',
+        type: 'Pecuaria Corte',
     }
 ]
