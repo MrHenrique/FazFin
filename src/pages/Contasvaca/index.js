@@ -2,6 +2,7 @@ import React from 'react';
 import { Text, Dimensions, View, Image, StyleSheet, Alert, Pressable, Button } from 'react-native';
 import { Directions } from 'react-native-gesture-handler';
 import Header from "../../components/Header";
+import { Containertudo } from "./styles";
 
 const ImgLeite = "../../../assets/milk-bottle.png";
 const ImgAliment = "../../../assets/cow.png";
@@ -13,7 +14,7 @@ const ScreenHeight = Dimensions.get('screen').height;
 
 function PageLancavacas({ navigation }) {
     return (
-        <View styles={styles.ContainerTudo}>
+        <View style={styles.ContainerTudo}>
             <Header title="Lançar Contas"></Header>
 
             <Pressable style={styles.botaos}>
@@ -78,9 +79,9 @@ const styles = StyleSheet.create({
         width: 60,
     },
     ContainerTudo: {
-        backgroundColor: '#008AA1',
+        backgroundColor: '#f2f2f2',
         flex: 1,
-    }
+}  
 
 });
 

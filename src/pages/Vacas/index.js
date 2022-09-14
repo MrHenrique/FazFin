@@ -14,7 +14,7 @@ function PageListavacas({ navigation }) {
     return (
 
         <View style={styles.container}>
-            <SafeAreaView style={{}}>
+            <SafeAreaView>
                 <Header title={"Vacas"}></Header>
                 <Lista_vacas />
                 <View style={styles.botaovoltar}>
@@ -32,15 +32,13 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: '#008AA1',
+        paddingEnd: 10,
     },
     botaovoltar: {
         paddingTop: 40,
         paddingBottom: 40,
         
-    },
-    listavaca: {
-        padding: 20,
-    },
+    }
 
 
 });
