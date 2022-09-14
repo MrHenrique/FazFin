@@ -27,11 +27,11 @@ export const Logo = styled.Image`
   margin-bottom: 20px;
   margin-top:50px;
 `;
-export const BotaoPress = styled.Pressable`
+export const BotaoPress = styled.TouchableOpacity`
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  background-color: #0F6D00;
+  background: rgba(15, 109, 0, 0.9);
   width: 270px;
   height: 50px;
   margin-bottom: 25px;

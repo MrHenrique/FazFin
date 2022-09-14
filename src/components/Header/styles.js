@@ -2,11 +2,13 @@ import { CurrentRenderContext } from "@react-navigation/native";
 import { Directions } from "react-native-gesture-handler";
 import styled from "styled-components";
 
-export const Container = styled.View`
-  height: 70px;
+export const Container = styled.SafeAreaView`
+  height: 65px;
   flex-direction: row-reverse;
   align-items: center;
   padding-left: 14px;
+  
+  background: rgba(15, 109, 0, 0.75);
 `;
 
 export const MenuButton = styled.TouchableOpacity`

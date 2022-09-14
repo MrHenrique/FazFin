@@ -31,7 +31,6 @@ function CadastroFaz() {
   return (
     <Container>
       <ImgBg source={require(imgbg1)} imageStyle={{ opacity: 0.5 }}>
-        <Header title="Cadastro de Fazenda" />
         <AreaCont>
           <Logo source={require("../../../assets/FazFin.png")} />
           <Texto>Nome da fazenda</Texto>
@@ -56,9 +55,9 @@ function CadastroFaz() {
             <TituloBotao>{"Cadastrar"}</TituloBotao>
           </BotaoPress>
           <BotaoPress
-            onPress={() => {
-              navigation.goBack();
-            }}
+            onPress={() => 
+              navigation.navigate("Home")
+            }
           >
             <TituloBotao>{"Voltar"}</TituloBotao>
           </BotaoPress>

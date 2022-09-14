@@ -9,24 +9,20 @@ export const Container = styled.SafeAreaView`
   flex: 1;
 `;
 export const Title = styled.Text`
-  padding-top: 10px;
   font-size: 30px;
   font-weight: bold;
   color: #fff;
-  padding-left: 14px;
-  padding-right: 14px;
   text-align: center;
 `;
 export const Logo = styled.Image`
   width: 90px;
   height: 90px;
   margin-top: 50px;
+  opacity: 0.9;
 `;
 export const Texto = styled.Text`
-  padding-top: 135px;
   font-weight: bold;
   font-size: 18px;
-  display: flex;
   text-align: center;
   color: #ffffff;
 `;
@@ -35,15 +31,15 @@ export const ImgBg = styled.ImageBackground`
   object-fit: cover;
   width: 100%;
 `;
-export const BotaoPress = styled.Pressable`
+export const BotaoPress = styled.TouchableOpacity`
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
-  background-color: #0F6D00;
-  width: 270px;
-  height: 50px;
-  margin-top: 40px;
-  margin-bottom: -20px;
+  border-radius: 15px;
+  background: rgba(15, 109, 0, 0.9);
+  width: 360px;
+  height: 40px;
+  bottom: -110px;
+  margin: 10px;
 `;
 export const TituloBotao = styled.Text`
   font-size: 16px;
