@@ -68,10 +68,10 @@ function Routes() {
         }}
       />
       <Drawer.Screen
-        name="Vacas"
+        name="Contas"
         component={PageLancavacas}
         options={{
-          title: "Lista de Vacas",
+          title: "Lancar contas",
           drawerIcon: ({ focused, size, color }) => (
             <Ionicons
               name={focused ? "person-add" : "person-add-outline"}

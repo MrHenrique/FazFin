@@ -2,7 +2,6 @@ import React from 'react';
 import { Text, Dimensions, View, Image, StyleSheet, Alert, Pressable, Button } from 'react-native';
 import { Directions } from 'react-native-gesture-handler';
 import Header from "../../components/Header";
-import { Containertudo } from "./styles";
 
 const ImgLeite = "../../../assets/milk-bottle.png";
 const ImgAliment = "../../../assets/cow.png";
@@ -14,28 +13,28 @@ const ScreenHeight = Dimensions.get('screen').height;
 
 function PageLancavacas({ navigation }) {
     return (
-        <Containertudo>
+        <View styles={styles.ContainerTudo}>
             <Header title="Lançar Contas"></Header>
 
             <Pressable style={styles.botaos}>
-            <Image style={styles.imagem} source={require(ImgLeite)} />
+                <Image style={styles.imagem} source={require(ImgLeite)} />
                 <Text style={styles.Texto}>      Leite</Text>
             </Pressable>
 
             <Pressable style={styles.botaos}>
-            <Image style={styles.imagem} source={require(ImgAliment)} />
+                <Image style={styles.imagem} source={require(ImgAliment)} />
                 <Text style={styles.Texto1}>Alimentação</Text>
             </Pressable>
 
             <Pressable style={styles.botaos}>
-            <Image style={styles.imagem} source={require(ImgManejo)}/>
+                <Image style={styles.imagem} source={require(ImgManejo)} />
                 <Text style={styles.Texto}>   Manejo </Text>
             </Pressable>
 
             <View style={styles.botaovoltar}>
                 <Button color='#008000' onPress={() => navigation.goBack()} title="Voltar" />
             </View>
-        </Containertudo>
+        </View>
     );
 }
 
@@ -68,7 +67,7 @@ const styles = StyleSheet.create({
     botaovoltar: {
         margin: 5,
         paddingTop: 30,
-        
+
         paddingBottom: 20,
         paddingStart: 30,
         paddingEnd: 30,
@@ -77,6 +76,10 @@ const styles = StyleSheet.create({
     imagem: {
         height: 60,
         width: 60,
+    },
+    ContainerTudo: {
+        backgroundColor: '#008AA1',
+        flex: 1,
     }
 
 });
