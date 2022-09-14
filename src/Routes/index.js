@@ -6,6 +6,7 @@ import { Ionicons } from "@expo/vector-icons";
 import CadastroFaz from "../pages/CadastroFaz";
 import StackRoutes from "../Routes/stackRoutes";
 import PageListavacas from "../pages/Vacas";
+import PageLancavacas from "../pages/Contasvaca";
 
 const Drawer = createDrawerNavigator();
 function Routes() {
@@ -66,7 +67,22 @@ function Routes() {
           ),
         }}
       />
+      <Drawer.Screen
+        name="Vacas"
+        component={PageLancavacas}
+        options={{
+          title: "Lista de Vacas",
+          drawerIcon: ({ focused, size, color }) => (
+            <Ionicons
+              name={focused ? "person-add" : "person-add-outline"}
+              size={size}
+              color={color}
+            />
+          ),
+        }}
+      />
     </Drawer.Navigator>
+    
   );
 }
 

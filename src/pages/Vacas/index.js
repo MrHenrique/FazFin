@@ -3,11 +3,7 @@ import { Button, Dimensions, View, SafeAreaView, StyleSheet, Text } from 'react-
 import { useNavigation } from "@react-navigation/native";
 import Header from "../../components/Header";
 import Lista_vacas from '../../components/Lista_Vacas';
-import {
-    ContainerVacas,
-    Butaovoltar,
 
-} from "./styles";
 import Pressable from 'react-native/Libraries/Components/Pressable/Pressable';
 
 const windowWidth = Dimensions.get('window').width;
