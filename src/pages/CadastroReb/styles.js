@@ -30,13 +30,12 @@ export const Logo = styled.Image`
 export const BotaoPress = styled.TouchableOpacity`
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
+  border-radius: 15px;
   background: rgba(15, 109, 0, 0.9);
-  width: 270px;
-  height: 50px;
-  margin-bottom: 25px;
-  margin-top: 75px;
-  margin-bottom: -55px;
+  width: 360px;
+  height: 40px;
+  bottom: -110px;
+  margin: 10px;
 `;
 export const TituloBotao = styled.Text`
   font-size: 16px;

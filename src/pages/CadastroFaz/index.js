@@ -1,11 +1,8 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, TouchableOpacity } from "react-native";
-import Header from "../../components/Header";
 import {
   Container,
   Texto,
   Logo,
-  Title,
   ImgBg,
   TituloBotao,
   BotaoPress,
@@ -54,11 +51,7 @@ function CadastroFaz() {
           <BotaoPress>
             <TituloBotao>{"Cadastrar"}</TituloBotao>
           </BotaoPress>
-          <BotaoPress
-            onPress={() => 
-              navigation.navigate("Home")
-            }
-          >
+          <BotaoPress onPress={() => navigation.navigate("Home")}>
             <TituloBotao>{"Voltar"}</TituloBotao>
           </BotaoPress>
         </AreaCont>

@@ -9,7 +9,7 @@ import {
   BotaoPress,
   AreaCont,
 } from "./styles";
-import { fazendas } from "../../components/Select/fazenda";
+import { fazendas } from "../../components/Select/data";
 import Select from "../../components/Select";
 function Home({ navigation }) {
   const imgbg1 = "../../../assets/background7.jpg";
@@ -19,6 +19,7 @@ function Home({ navigation }) {
         <AreaCont>
           <Logo source={require("../../../assets/FazFin.png")} />
           <Title>Bem-vindo(a)</Title>
+          <Texto>Sua fazenda</Texto>
             <Select touchableText="Selecione sua fazenda" title="Fazendas" objKey="code" objValue="name" data={fazendas} />
           <BotaoPress onPress={() => navigation.navigate("CadastroFaz")}>
             <TituloBotao>{"Cadastrar fazenda"}</TituloBotao>
