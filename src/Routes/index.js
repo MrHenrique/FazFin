@@ -1,13 +1,13 @@
 import React from "react";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 
-import { Ionicons } from "@expo/vector-icons";
-
+import { Ionicons, MaterialCommunityIcons, MaterialIcons } from "@expo/vector-icons";
 import CadastroFaz from "../pages/CadastroFaz";
 import StackRoutes from "../Routes/stackRoutes";
 import PageListavacas from "../pages/Vacas";
 import PageLancavacas from "../pages/Contasvaca";
 import GeralFaz from "../pages/GeralFaz";
+import CadastroReb from "../pages/CadastroReb";
 
 const Drawer = createDrawerNavigator();
 function Routes() {
@@ -60,8 +60,8 @@ function Routes() {
         options={{
           title: "Lista de Vacas",
           drawerIcon: ({ focused, size, color }) => (
-            <Ionicons
-              name={focused ? "person-add" : "person-add-outline"}
+            <MaterialCommunityIcons
+              name={focused ? "account-cowboy-hat" : "account-cowboy-hat"}
               size={size}
               color={color}
             />
@@ -74,8 +74,8 @@ function Routes() {
         options={{
           title: "Lancar contas",
           drawerIcon: ({ focused, size, color }) => (
-            <Ionicons
-              name={focused ? "person-add" : "person-add-outline"}
+            <MaterialIcons
+              name={focused ? "attach-money" : "attach-money"}
               size={size}
               color={color}
             />
@@ -88,8 +88,22 @@ function Routes() {
         options={{
           title: "Visão geral Fazenda",
           drawerIcon: ({ focused, size, color }) => (
-            <Ionicons
-              name={focused ? "person-add" : "person-add-outline"}
+            <MaterialCommunityIcons
+              name={focused ? "finance" : "finance"}
+              size={size}
+              color={color}
+            />
+          ),
+        }}
+      />
+      <Drawer.Screen
+        name="Cadastro Rebanho"
+        component={CadastroReb}
+        options={{
+          title: "Cadastro Rebanho",
+          drawerIcon: ({ focused, size, color }) => (
+            <MaterialCommunityIcons 
+              name={focused ? "cow-off" : "cow"}
               size={size}
               color={color}
             />

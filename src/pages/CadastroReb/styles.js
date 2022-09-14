@@ -34,7 +34,7 @@ export const BotaoPress = styled.TouchableOpacity`
   background: rgba(15, 109, 0, 0.9);
   width: 360px;
   height: 40px;
-  bottom: -70px;
+  bottom: -110px;
   margin: 10px;
 `;
 export const TituloBotao = styled.Text`

@@ -21,10 +21,10 @@ export const Logo = styled.Image`
   opacity: 0.9;
 `;
 export const Texto = styled.Text`
-  font-weight: bold;
-  font-size: 18px;
-  text-align: center;
+  font-weight: normal;
+  font-size: 17px;
   color: #ffffff;
+  margin-top : 70px;
 `;
 export const ImgBg = styled.ImageBackground`
   flex: 1;
@@ -38,7 +38,7 @@ export const BotaoPress = styled.TouchableOpacity`
   background: rgba(15, 109, 0, 0.9);
   width: 360px;
   height: 40px;
-  bottom: -110px;
+  bottom: -215px;
   margin: 10px;
 `;
 export const TituloBotao = styled.Text`

@@ -16,7 +16,7 @@ export const BotaoPress = styled.TouchableOpacity`
   background: rgba(15, 109, 0, 0.9);
   width: 360px;
   height: 40px;
-  bottom: -120px;
+  bottom: -60px;
   margin: 10px;
 `;
 export const BotaoPress2 = styled.TouchableOpacity`

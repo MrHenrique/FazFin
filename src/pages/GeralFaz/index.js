@@ -13,7 +13,8 @@ import {
   ImgBg,
 } from "./styles";
 import Header from "../../components/Header";
-import Dropdown from "../../components/Select";
+import { rebanhos } from "../../components/Select/data";
+import Select from "../../components/Select";
 function GeralFaz({ navigation }) {
   const imgbg1 = "../../../assets/bg4.jpg";
   return (
@@ -32,11 +33,17 @@ function GeralFaz({ navigation }) {
           </TextoBanner>
           <TextoBanner>{"Total Mensal: R$ 1500,00"}</TextoBanner>
         </BannerButton>
-        <BotaoPress2>
+        <BotaoPress2 onPress={() => navigation.navigate("CadastroReb")}>
           <TituloBotao>{"Cadastrar ou modificar rebanhos"}</TituloBotao>
         </BotaoPress2>
         <Texto>Selecionar rebanho</Texto>
-        <Dropdown datadropdown={["Rebanho 1", "Pasto Bezerros", "Solteiras"]} />
+        <Select
+          touchableText="Selecione seu rebanho"
+          title="Rebanhos"
+          objKey="code"
+          objValue="name"
+          data={rebanhos}
+        />
         <BotaoPress>
           <TituloBotao>{"Continuar"}</TituloBotao>
         </BotaoPress>
