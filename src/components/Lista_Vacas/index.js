@@ -26,14 +26,16 @@ function Lista_vacas() {
 
 const styles = StyleSheet.create({
     containerVacas: {
-        width: windowWidth - 60,
+        width: windowWidth,
         margin: 5,
+        alignItems: 'center',
     },
     cardVacas: {
         padding: 15,
         backgroundColor: "#D9D9D9",
         alignItems: 'center',
-        borderRadius: windowHeight * 0.015
+        borderRadius: windowHeight * 0.015,
+        width: windowWidth - 60,
     },
     textVacas: {
         color: '#000',

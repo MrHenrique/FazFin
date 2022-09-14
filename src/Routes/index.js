@@ -6,6 +6,7 @@ import { Ionicons } from "@expo/vector-icons";
 import CadastroFaz from "../pages/CadastroFaz";
 import StackRoutes from "../Routes/stackRoutes";
 import PageListavacas from "../pages/Vacas";
+import PageLancavacas from "../pages/Contasvaca";
 import GeralFaz from "../pages/GeralFaz";
 
 const Drawer = createDrawerNavigator();
@@ -68,6 +69,20 @@ function Routes() {
         }}
       />
       <Drawer.Screen
+        name="Contas"
+        component={PageLancavacas}
+        options={{
+          title: "Lancar contas",
+          drawerIcon: ({ focused, size, color }) => (
+            <Ionicons
+              name={focused ? "person-add" : "person-add-outline"}
+              size={size}
+              color={color}
+            />
+          ),
+        }}
+      />
+      <Drawer.Screen
         name="Visão geral Fazenda"
         component={GeralFaz}
         options={{
@@ -82,6 +97,7 @@ function Routes() {
         }}
       />
     </Drawer.Navigator>
+    
   );
 }
 
