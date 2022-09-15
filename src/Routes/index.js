@@ -1,12 +1,13 @@
 import React from "react";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 
-import { Ionicons } from "@expo/vector-icons";
-
+import { Ionicons, MaterialCommunityIcons, MaterialIcons } from "@expo/vector-icons";
 import CadastroFaz from "../pages/CadastroFaz";
 import StackRoutes from "../Routes/stackRoutes";
 import PageListavacas from "../pages/Vacas";
-import Lanca_contas from "../pages/Lanca_contas"
+import PageLancavacas from "../pages/Contasvaca";
+import GeralFaz from "../pages/GeralFaz";
+import CadastroReb from "../pages/CadastroReb";
 
 const Drawer = createDrawerNavigator();
 function Routes() {
@@ -19,7 +20,7 @@ function Routes() {
           backgroundColor: "#004513",
           paddingTop: 20,
         },
-
+        drawerPosition: "right",
         drawerActiveBackgroundColor: "#0F6D00",
         drawerActiveTintColor: "#fff",
         drawerInactiveTintColor: "#FFF",
@@ -59,8 +60,8 @@ function Routes() {
         options={{
           title: "Lista de Vacas",
           drawerIcon: ({ focused, size, color }) => (
-            <Ionicons
-              name={focused ? "person-add" : "person-add-outline"}
+            <MaterialCommunityIcons
+              name={focused ? "account-cowboy-hat" : "account-cowboy-hat"}
               size={size}
               color={color}
             />
@@ -68,13 +69,41 @@ function Routes() {
         }}
       />
       <Drawer.Screen
-        name="Lançar Contas"
-        component={Lanca_contas}
+        name="Contas"
+        component={PageLancavacas}
         options={{
-          title: "Lançar Contas",
+          title: "Lancar contas",
           drawerIcon: ({ focused, size, color }) => (
-            <Ionicons
-              name={focused ? "person-add" : "person-add-outline"}
+            <MaterialIcons
+              name={focused ? "attach-money" : "attach-money"}
+              size={size}
+              color={color}
+            />
+          ),
+        }}
+      />
+      <Drawer.Screen
+        name="Visão geral Fazenda"
+        component={GeralFaz}
+        options={{
+          title: "Visão geral Fazenda",
+          drawerIcon: ({ focused, size, color }) => (
+            <MaterialCommunityIcons
+              name={focused ? "finance" : "finance"}
+              size={size}
+              color={color}
+            />
+          ),
+        }}
+      />
+      <Drawer.Screen
+        name="Cadastro Rebanho"
+        component={CadastroReb}
+        options={{
+          title: "Cadastro Rebanho",
+          drawerIcon: ({ focused, size, color }) => (
+            <MaterialCommunityIcons 
+              name={focused ? "cow-off" : "cow"}
               size={size}
               color={color}
             />
@@ -82,6 +111,7 @@ function Routes() {
         }}
       />
     </Drawer.Navigator>
+    
   );
 }
 

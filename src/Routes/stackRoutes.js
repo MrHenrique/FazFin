@@ -3,6 +3,8 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import Home from "../pages/Home";
 import CadastroFaz from "../pages/CadastroFaz";
+import GeralFaz from "../pages/GeralFaz";
+import CadastroReb from "../pages/CadastroReb";
 const Stack = createNativeStackNavigator();
 function StackRoutes() {
   return (
@@ -19,7 +21,20 @@ function StackRoutes() {
         component={CadastroFaz}
         options={{
           headerShown: false,
-          title: "Cadastro",
+        }}
+      />
+      <Stack.Screen
+        name="GeralFaz"
+        component={GeralFaz}
+        options={{
+          headerShown: false,
+        }}
+      />
+        <Stack.Screen
+        name="CadastroReb"
+        component={CadastroReb}
+        options={{
+          headerShown: false,
         }}
       />
     </Stack.Navigator>
