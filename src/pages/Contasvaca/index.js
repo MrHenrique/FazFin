@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, Dimensions, View, Image, StyleSheet, Alert, Pressable, Button } from 'react-native';
+import { Text, Dimensions, View, Image, StyleSheet, Button, TouchableOpacity, SafeAreaView } from 'react-native';
 import { Directions } from 'react-native-gesture-handler';
 import Header from "../../components/Header";
 import { Containertudo } from "./styles";
@@ -17,31 +17,33 @@ function PageLancavacas({ navigation }) {
         <View style={styles.ContainerTudo}>
             <Header title="Lançar Contas"></Header>
 
-            <Pressable style={styles.botaos}>
-                <Image style={styles.imagem} source={require(ImgLeite)} />
-                <Text style={styles.Texto}>      Leite</Text>
-            </Pressable>
+            <SafeAreaView style={styles.areabotao} >
+                <TouchableOpacity style={styles.botaos}>
+                    <Image style={styles.imagem} source={require(ImgLeite)} />
+                    <Text style={styles.Texto}>      Leite</Text>
+                </TouchableOpacity>
 
-            <Pressable style={styles.botaos}>
-                <Image style={styles.imagem} source={require(ImgAliment)} />
-                <Text style={styles.Texto1}>Alimentação</Text>
-            </Pressable>
+                <TouchableOpacity style={styles.botaos}>
+                    <Image style={styles.imagem} source={require(ImgAliment)} />
+                    <Text style={styles.Texto1}>Alimentação</Text>
+                </TouchableOpacity>
 
-            <Pressable style={styles.botaos}>
-                <Image style={styles.imagem} source={require(ImgManejo)} />
-                <Text style={styles.Texto}>   Manejo </Text>
-            </Pressable>
+                <TouchableOpacity style={styles.botaos}>
+                    <Image style={styles.imagem} source={require(ImgManejo)} />
+                    <Text style={styles.Texto}>   Manejo </Text>
+                </TouchableOpacity>
 
-            <View style={styles.botaovoltar}>
-                <Button color='#008000' onPress={() => navigation.goBack()} title="Voltar" />
-            </View>
+                <View style={styles.botaovoltar}>
+                    <Button color='#008000' onPress={() => navigation.goBack()} title="Voltar" />
+                </View>
+            </SafeAreaView>
         </View>
     );
 }
 
 const styles = StyleSheet.create({
     containerbotaos: {
-        width: windowWidth - 60,
+        width: windowWidth - 65,
         margin: 5,
     },
     botaos: {
@@ -50,15 +52,21 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-evenly',
         borderRadius: windowHeight * 0.015,
-        paddingTop: windowHeight * 0.05,
-        paddingBottom: windowHeight * 0.05,
-        margin: 5,
+        paddingTop: "10%",
+        paddingBottom: "10%",
+        margin: "2%",
         backgroundColor: 'white',
     },
     Texto: {
-        margin: 10,
+        margin: "1%",
         fontSize: 35,
         fontWeight: 'bold',
+    },
+    areabotao: {
+        paddingEnd: "3%",
+        paddingStart: "3%",
+        paddingTop: "5%",
+        
     },
     Texto1: {
         margin: 10,
@@ -80,8 +88,9 @@ const styles = StyleSheet.create({
     },
     ContainerTudo: {
         backgroundColor: '#f2f2f2',
-        flex: 1,
-}  
+        width: windowWidth,
+        height: windowHeight,
+    }
 
 });
 
