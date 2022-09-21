@@ -122,7 +122,7 @@ function Routes() {
         options={{
           title: "Manejo",
           drawerIcon: ({ focused, size, color }) => (
-            <MaterialCommunityIcons 
+            <MaterialCommunityIcons
               name={focused ? "cow-off" : "cow"}
               size={size}
               color={color}
@@ -130,14 +130,16 @@ function Routes() {
           ),
         }}
       />
-<Drawer.Screen
+      <Drawer.Screen
         name="Visão geral de rebanho"
         component={GeralReb}
         options={{
           title: "Visão geral de rebanho",
           drawerIcon: ({ focused, size, color }) => (
             <MaterialCommunityIcons
-              name={focused ? "calculator-variant-outline" : "calculator-variant"}
+              name={
+                focused ? "calculator-variant-outline" : "calculator-variant"
+              }
               size={size}
               color={color}
             />

@@ -44,11 +44,11 @@ function StackRoutes() {
       <Stack.Screen
         name="Manejo"
         component={Manejo}
- options={{
+        options={{
           headerShown: false,
         }}
       />
-        <Stack.Screen
+      <Stack.Screen
         name="GeralReb"
         component={GeralReb}
         options={{
@@ -56,19 +56,19 @@ function StackRoutes() {
         }}
       />
       <Stack.Screen
-      name="PageLancavacas"
-      component={PageLancavacas}
-      options={{
-        headerShown: false,
-      }}
-    />
-    <Stack.Screen
-      name="PageListavacas"
-      component={PageListavacas}
-      options={{
-        headerShown: false,
-      }}
-    />
+        name="PageLancavacas"
+        component={PageLancavacas}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="PageListavacas"
+        component={PageListavacas}
+        options={{
+          headerShown: false,
+        }}
+      />
     </Stack.Navigator>
   );
 }
