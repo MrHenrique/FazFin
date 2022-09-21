@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, Dimensions, View, Image, StyleSheet, Button, TouchableOpacity, SafeAreaView } from 'react-native';
 import { Directions } from 'react-native-gesture-handler';
 import Header from "../../components/Header";
-import { Containertudo } from "./styles";
+import { Texto } from "./styles";
 
 const ImgLeite = "../../../assets/milk-bottle.png";
 const ImgAliment = "../../../assets/cow.png";
@@ -11,6 +11,7 @@ const ImgManejo = "../../../assets/smart-farm.png";
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 const ScreenHeight = Dimensions.get('screen').height;
+const ScreenWidth = Dimensions.get('screen').width;
 
 function PageLancavacas({ navigation }) {
     return (
@@ -33,9 +34,10 @@ function PageLancavacas({ navigation }) {
                     <Text style={styles.Texto}>   Manejo </Text>
                 </TouchableOpacity>
 
-                <View style={styles.botaovoltar}>
-                    <Button color='#008000' onPress={() => navigation.goBack()} title="Voltar" />
-                </View>
+                <TouchableOpacity style={styles.voltar}  onPress={() => navigation.goBack() }>
+                    <Texto>{"Voltar"}</Texto>
+                </TouchableOpacity>
+
             </SafeAreaView>
         </View>
     );
@@ -47,7 +49,6 @@ const styles = StyleSheet.create({
         margin: 5,
     },
     botaos: {
-        alignSelf: 'stretch',
         alignContent: 'space-around',
         flexDirection: 'row',
         justifyContent: 'space-evenly',
@@ -66,21 +67,23 @@ const styles = StyleSheet.create({
         paddingEnd: "3%",
         paddingStart: "3%",
         paddingTop: "5%",
-        
+
     },
     Texto1: {
         margin: 10,
         fontSize: 30,
         fontWeight: 'bold',
     },
-    botaovoltar: {
-        margin: 5,
-        paddingTop: 30,
-
-        paddingBottom: 20,
-        paddingStart: 30,
-        paddingEnd: 30,
-
+    voltar: {
+        backgroundColor: "#008000",
+        borderRadius: 10,
+        justifyContent: "center",
+        alignItems: 'center',
+        width: "80%",
+        height: "10%",
+        position: "absolute",
+        bottom: (windowHeight - ScreenHeight)*2,
+        left: "13%",
     },
     imagem: {
         height: 60,
@@ -88,8 +91,8 @@ const styles = StyleSheet.create({
     },
     ContainerTudo: {
         backgroundColor: '#f2f2f2',
-        width: windowWidth,
-        height: windowHeight,
+        width: ScreenWidth,
+        height: ScreenHeight,
     }
 
 });
