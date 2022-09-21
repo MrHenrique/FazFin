@@ -12,6 +12,7 @@ import PageListavacas from "../pages/PageListavacas";
 import PageLancavacas from "../pages/PageLancavacas";
 import GeralFaz from "../pages/GeralFaz";
 import CadastroReb from "../pages/CadastroReb";
+import Manejo from "../pages/Manejo";
 import GeralReb from "../pages/GeralReb";
 
 const Drawer = createDrawerNavigator();
@@ -116,6 +117,20 @@ function Routes() {
         }}
       />
       <Drawer.Screen
+        name="Manejo"
+        component={Manejo}
+        options={{
+          title: "Manejo",
+          drawerIcon: ({ focused, size, color }) => (
+            <MaterialCommunityIcons 
+              name={focused ? "cow-off" : "cow"}
+              size={size}
+              color={color}
+            />
+          ),
+        }}
+      />
+<Drawer.Screen
         name="Visão geral de rebanho"
         component={GeralReb}
         options={{
