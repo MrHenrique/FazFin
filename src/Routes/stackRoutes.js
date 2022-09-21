@@ -5,6 +5,7 @@ import Home from "../pages/Home";
 import CadastroFaz from "../pages/CadastroFaz";
 import GeralFaz from "../pages/GeralFaz";
 import CadastroReb from "../pages/CadastroReb";
+import Manejo from "../pages/Manejo";
 const Stack = createNativeStackNavigator();
 function StackRoutes() {
   return (
@@ -33,6 +34,13 @@ function StackRoutes() {
         <Stack.Screen
         name="CadastroReb"
         component={CadastroReb}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="Manejo"
+        component={Manejo}
         options={{
           headerShown: false,
         }}
