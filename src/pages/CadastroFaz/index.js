@@ -10,7 +10,7 @@ import {
   CampoTexto,
 } from "./styles";
 import { useNavigation } from "@react-navigation/native";
-
+import { Alert } from "react-native";
 function CadastroFaz() {
   const [nomefaz, setNomefaz] = useState("");
   const [proprietario, setProprietario] = useState("");
@@ -23,6 +23,9 @@ function CadastroFaz() {
     };
     console.log(data);
   }
+  const CadSucess = () => {
+    Alert.alert("Cadastro com sucesso!");
+  };
   const navigation = useNavigation();
   const imgbg1 = "../../../assets/backgroundCad.jpg";
   return (
@@ -48,7 +51,7 @@ function CadastroFaz() {
             value={tipoprod}
             placeholder="Ex: Pecuaria Leiteira"
           ></CampoTexto>
-          <BotaoPress>
+          <BotaoPress onPress={CadSucess}>
             <TituloBotao>{"Cadastrar"}</TituloBotao>
           </BotaoPress>
           <BotaoPress onPress={() => navigation.navigate("Home")}>
