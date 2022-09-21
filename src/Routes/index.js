@@ -1,13 +1,18 @@
 import React from "react";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 
-import { Ionicons, MaterialCommunityIcons, MaterialIcons } from "@expo/vector-icons";
+import {
+  Ionicons,
+  MaterialCommunityIcons,
+  MaterialIcons,
+} from "@expo/vector-icons";
 import CadastroFaz from "../pages/CadastroFaz";
 import StackRoutes from "../Routes/stackRoutes";
-import PageListavacas from "../pages/Vacas";
-import PageLancavacas from "../pages/Contasvaca";
+import PageListavacas from "../pages/PageListavacas";
+import PageLancavacas from "../pages/PageLancavacas";
 import GeralFaz from "../pages/GeralFaz";
 import CadastroReb from "../pages/CadastroReb";
+import GeralReb from "../pages/GeralReb";
 
 const Drawer = createDrawerNavigator();
 function Routes() {
@@ -83,10 +88,10 @@ function Routes() {
         }}
       />
       <Drawer.Screen
-        name="Visão geral Fazenda"
+        name="Visão geral de Fazenda"
         component={GeralFaz}
         options={{
-          title: "Visão geral Fazenda",
+          title: "Visão geral de Fazenda",
           drawerIcon: ({ focused, size, color }) => (
             <MaterialCommunityIcons
               name={focused ? "finance" : "finance"}
@@ -102,7 +107,7 @@ function Routes() {
         options={{
           title: "Cadastro Rebanho",
           drawerIcon: ({ focused, size, color }) => (
-            <MaterialCommunityIcons 
+            <MaterialCommunityIcons
               name={focused ? "cow-off" : "cow"}
               size={size}
               color={color}
@@ -110,8 +115,21 @@ function Routes() {
           ),
         }}
       />
+      <Drawer.Screen
+        name="Visão geral de rebanho"
+        component={GeralReb}
+        options={{
+          title: "Visão geral de rebanho",
+          drawerIcon: ({ focused, size, color }) => (
+            <MaterialCommunityIcons
+              name={focused ? "calculator-variant-outline" : "calculator-variant"}
+              size={size}
+              color={color}
+            />
+          ),
+        }}
+      />
     </Drawer.Navigator>
-    
   );
 }
 

@@ -28,7 +28,7 @@ function GeralFaz({ navigation }) {
             <TextoBannerRec>{"R$ 5000,00"}</TextoBannerRec>
           </TextoBanner>
           <TextoBanner>
-            {"Receita Mensal: "}
+            {"Gasto Mensal: "}
             <TextoBannerDes>{"R$ 3500,00"}</TextoBannerDes>
           </TextoBanner>
           <TextoBanner>{"Total Mensal: R$ 1500,00"}</TextoBanner>
@@ -44,7 +44,7 @@ function GeralFaz({ navigation }) {
           objValue="name"
           data={rebanhos}
         />
-        <BotaoPress>
+        <BotaoPress onPress={() => navigation.navigate("GeralReb")}>
           <TituloBotao>{"Continuar"}</TituloBotao>
         </BotaoPress>
         <BotaoPress onPress={() => navigation.navigate("Home")}>
