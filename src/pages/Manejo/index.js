@@ -1,88 +1,44 @@
 import React from 'react';
-import { Text, Dimensions, View, Image, StyleSheet, Alert, Pressable, Button } from 'react-native';
-import { Directions } from 'react-native-gesture-handler';
+import {
+    TituloBotao,
+    BotaoPress,
+    AreaCont,
+    BotaoPress2,
+    ImgBg,
+    TituloBotao2,
+} from "./styles";
 import Header from "../../components/Header";
-import { Containertudo } from "./styles";
-
-const ImgLeite = "../../../assets/milk-bottle.png";
-const ImgAliment = "../../../assets/cow.png";
-const ImgManejo = "../../../assets/smart-farm.png";
-
-const windowWidth = Dimensions.get('window').width;
-const windowHeight = Dimensions.get('window').height;
-const ScreenHeight = Dimensions.get('screen').height;
-
+import { MaterialCommunityIcons, MaterialIcons } from "@expo/vector-icons";
+import { FontAwesome5 } from '@expo/vector-icons';
 function Manejo({ navigation }) {
+    const imgbg1 = "c:/Users/samue/Documents/GitHub/FazFin/assets/bg10.jpg"
     return (
-        <View style={styles.ContainerTudo}>
-            <Header title="Manejo"></Header>
-
-            <Pressable style={styles.botaos}>
-                
-                <Text style={styles.Texto}>      Vacina e Remedios</Text>
-            </Pressable>
-
-            <Pressable style={styles.botaos}>
-                
-                <Text style={styles.Texto1}>Mão de Obra</Text>
-            </Pressable>
-
-            <Pressable style={styles.botaos}>
-               
-                <Text style={styles.Texto}>   Outros</Text>
-            </Pressable>
-
-            <View style={styles.botaovoltar}>
-                <Button color='#008000' onPress={() => navigation.goBack()} title="Voltar" />
-            </View>
-        </View>
+        <ImgBg source={require(imgbg1)} imageStyle={{ opacity: 0.5 }}>
+            <Header title="Olá, Carlos" />
+            <AreaCont>
+                <BotaoPress2 onPress={() => navigation.navigate("VacinaRem")}>
+                    <TituloBotao2>
+                        <MaterialCommunityIcons name="hospital-box-outline" size={35} color="white" />
+                        {"Vacina e Remedios"}
+                    </TituloBotao2>
+                </BotaoPress2>
+                <BotaoPress2 onPress={() => navigation.navigate("PageListavacas")}>
+                    <TituloBotao2>
+                    <MaterialCommunityIcons name="hammer-screwdriver" size={35} color="white" />
+                        {"Mão de obra"}
+                    </TituloBotao2>
+                </BotaoPress2>
+                <BotaoPress2 onPress={() => navigation.navigate("PageLancavacas")}>
+                    <TituloBotao2>
+                        <FontAwesome5 name="tractor" size={35} color="white" />
+                        {"Outros"}
+                    </TituloBotao2>
+                </BotaoPress2>
+                <BotaoPress onPress={() => navigation.navigate("PageLancavacas")}>
+                    <TituloBotao>{"Voltar"}</TituloBotao>
+                </BotaoPress>
+            </AreaCont>
+        </ImgBg>
     );
 }
-
-const styles = StyleSheet.create({
-    containerbotaos: {
-        width: windowWidth - 60,
-        margin: 5,
-    },
-    botaos: {
-        alignSelf: 'stretch',
-        alignContent: 'space-around',
-        flexDirection: 'row',
-        justifyContent: 'space-evenly',
-        borderRadius: windowHeight * 0.015,
-        paddingTop: windowHeight * 0.05,
-        paddingBottom: windowHeight * 0.05,
-        margin: 5,
-        backgroundColor: 'white',
-    },
-    Texto: {
-        margin: 10,
-        fontSize: 35,
-        fontWeight: 'bold',
-    },
-    Texto1: {
-        margin: 10,
-        fontSize: 30,
-        fontWeight: 'bold',
-    },
-    botaovoltar: {
-        margin: 5,
-        paddingTop: 30,
-
-        paddingBottom: 20,
-        paddingStart: 30,
-        paddingEnd: 30,
-
-    },
-    imagem: {
-        height: 60,
-        width: 60,
-    },
-    ContainerTudo: {
-        backgroundColor: '#f2f2f2',
-        flex: 1,
-}  
-
-});
-
 export default Manejo;
