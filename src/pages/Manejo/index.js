@@ -6,6 +6,7 @@ import {
     BotaoPress2,
     ImgBg,
     TituloBotao2,
+    
 } from "./styles";
 import Header from "../../components/Header";
 import { MaterialCommunityIcons, MaterialIcons } from "@expo/vector-icons";

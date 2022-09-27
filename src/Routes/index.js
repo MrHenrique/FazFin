@@ -15,6 +15,7 @@ import CadastroReb from "../pages/CadastroReb";
 import Manejo from "../pages/Manejo";
 import GeralReb from "../pages/GeralReb";
 
+
 const Drawer = createDrawerNavigator();
 function Routes() {
   return (
@@ -122,7 +123,7 @@ function Routes() {
         options={{
           title: "Manejo",
           drawerIcon: ({ focused, size, color }) => (
-            <MaterialCommunityIcons 
+            <MaterialCommunityIcons
               name={focused ? "cow-off" : "cow"}
               size={size}
               color={color}
@@ -130,7 +131,7 @@ function Routes() {
           ),
         }}
       />
-<Drawer.Screen
+      <Drawer.Screen
         name="Visão geral de rebanho"
         component={GeralReb}
         options={{

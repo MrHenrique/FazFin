@@ -9,6 +9,8 @@ import Manejo from "../pages/Manejo";
 import GeralReb from "../pages/GeralReb";
 import PageLancavacas from "../pages/PageLancavacas";
 import PageListavacas from "../pages/PageListavacas";
+import VacinaRem from "../pages/VacinaRem";
+
 const Stack = createNativeStackNavigator();
 function StackRoutes() {
   return (
@@ -69,7 +71,15 @@ function StackRoutes() {
         headerShown: false,
       }}
     />
+    <Stack.Screen
+      name="VacinaRem"
+      component={VacinaRem}
+      options={{
+        headerShown: false,
+      }}
+    />
     </Stack.Navigator>
+    
   );
 }
 

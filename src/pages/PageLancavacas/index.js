@@ -27,7 +27,7 @@ function PageLancavacas({ navigation }) {
                 <Text style={styles.Texto1}>Alimentação</Text>
             </Pressable>
 
-            <Pressable style={styles.botaos}>
+            <Pressable style={styles.botaos} onPress={() => navigation.navigate("Manejo") }>
                 <Image style={styles.imagem} source={require(ImgManejo)} />
                 <Text style={styles.Texto}>   Manejo </Text>
             </Pressable>
