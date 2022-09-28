@@ -5,7 +5,12 @@ import { Ionicons } from "@expo/vector-icons";
 
 import CadastroFaz from "../pages/CadastroFaz";
 import StackRoutes from "../Routes/stackRoutes";
-
+import PageListavacas from "../pages/PageListavacas";
+import PageLancavacas from "../pages/PageLancavacas";
+import GeralFaz from "../pages/GeralFaz";
+import CadastroReb from "../pages/CadastroReb";
+import Manejo from "../pages/Manejo";
+import GeralReb from "../pages/GeralReb";
 const Drawer = createDrawerNavigator();
 function Routes() {
   return (

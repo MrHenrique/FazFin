@@ -27,8 +27,8 @@ function Home({ navigation }) {
         <AreaCont>
           <Logo source={require("../../../assets/FazFin.png")} />
           <Title>Bem-vindo(a)</Title>
-          <Texto>Selecione sua Fazenda</Texto>
-          <Dropdown />
+          <Texto>Sua fazenda</Texto>
+          <Select touchableText="Selecione sua fazenda" title="Fazendas" objKey="code" objValue="name" data={fazendas} />
           <BotaoPress onPress={() => navigation.navigate("CadastroFaz")}>
             <TituloBotao>{"Cadastrar fazenda"}</TituloBotao>
           </BotaoPress>
