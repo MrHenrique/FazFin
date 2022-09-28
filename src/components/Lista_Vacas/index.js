@@ -17,17 +17,20 @@ const windowHeight = Dimensions.get("window").height;
 
 function Lista_vacas() {
   const [isModalVisible, setModalVisible] = useState(false);
+  const [Details, setDetails] = useState([]);
 
-  const toggleModal = () => {
+  function toggleModal() {
     setModalVisible(!isModalVisible);
   }
   return (
     <View style={styles.Tudocont}>
       <View style={{ flex: 1 }}>
         <Modal isVisible={isModalVisible}>
-          <View style={{ flex: 1 }}>
-            <Text>Hello!</Text>
-            <Button title="Hide modal" onPress={toggleModal} />
+          <View style={{ flex: 1, }}>
+            <Text style={{ color: "white", fontSize: 20, }}>nome: {Details.name}, id: {Details.id}</Text>
+            <Button title="Voltar" onPress={() => {
+              toggleModal();
+            }} />
           </View>
         </Modal>
       </View>
@@ -39,7 +42,11 @@ function Lista_vacas() {
             <TouchableOpacity
               activeOpacity={0.5}
               style={styles.cardVacas}
-              onPress={toggleModal}
+              onPress={() => {
+                toggleModal();
+                setDetails(item)
+              }
+              }
             >
               <Text style={styles.textVacas}>{item.name}</Text>
             </TouchableOpacity>
