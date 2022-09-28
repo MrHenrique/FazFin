@@ -20,7 +20,7 @@ function Home({ navigation }) {
           <Logo source={require("../../../assets/FazFin.png")} />
           <Title>Bem-vindo(a)</Title>
           <Texto>Sua fazenda</Texto>
-            <Select touchableText="Selecione sua fazenda" title="Fazendas" objKey="code" objValue="name" data={fazendas} />
+          <Select touchableText="Selecione sua fazenda" title="Fazendas" objKey="code" objValue="name" data={fazendas} />
           <BotaoPress onPress={() => navigation.navigate("CadastroFaz")}>
             <TituloBotao>{"Cadastrar fazenda"}</TituloBotao>
           </BotaoPress>

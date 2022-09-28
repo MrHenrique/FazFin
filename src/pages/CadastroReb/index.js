@@ -12,8 +12,11 @@ import {
   CampoTexto,
 } from "./styles";
 import { useNavigation } from "@react-navigation/native";
-
+import {Alert} from "react-native"
 function CadastroReb() {
+  const CadSucess = () => {
+    Alert.alert("Cadastro com sucesso!");
+  };
   const [nomereb, setNomereb] = useState("");
   const [QtdAni, setQtdAni] = useState("");
   function cadReb() {
@@ -43,7 +46,7 @@ function CadastroReb() {
             value={QtdAni}
             placeholder="Quantos animais no rebanho?"
           ></CampoTexto>
-          <BotaoPress>
+          <BotaoPress onPress={CadSucess}>
             <TituloBotao>{"Cadastrar"}</TituloBotao>
           </BotaoPress>
           <BotaoPress onPress={() => navigation.navigate("GeralFaz")}>
