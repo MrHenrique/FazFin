@@ -9,6 +9,7 @@ import Manejo from "../pages/Manejo";
 import GeralReb from "../pages/GeralReb";
 import PageLancavacas from "../pages/PageLancavacas";
 import PageListavacas from "../pages/PageListavacas";
+import VacinaRem from "../pages/VacinaRem";
 import FinanceiroFaz from "../pages/FinanceiroFaz";
 const Stack = createNativeStackNavigator();
 function StackRoutes() {
@@ -57,19 +58,26 @@ function StackRoutes() {
         }}
       />
       <Stack.Screen
-        name="PageLancavacas"
-        component={PageLancavacas}
-        options={{
-          headerShown: false,
-        }}
-      />
-      <Stack.Screen
-        name="PageListavacas"
-        component={PageListavacas}
-        options={{
-          headerShown: false,
-        }}
-      />
+      name="PageLancavacas"
+      component={PageLancavacas}
+      options={{
+        headerShown: false,
+      }}
+    />
+    <Stack.Screen
+      name="PageListavacas"
+      component={PageListavacas}
+      options={{
+        headerShown: false,
+      }}
+    />
+    <Stack.Screen
+      name="VacinaRem"
+      component={VacinaRem}
+      options={{
+        headerShown: false,
+      }}
+    />
       <Stack.Screen
         name="FinanceiroFaz"
         component={FinanceiroFaz}
@@ -77,6 +85,7 @@ function StackRoutes() {
           headerShown: false,
         }} />
     </Stack.Navigator>
+    
   );
 }
 

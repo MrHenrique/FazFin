@@ -35,15 +35,10 @@ function PageLancavacas({ navigation }) {
         <Image style={styles.imagem} source={require(ImgAliment)} />
         <Text style={styles.Texto1}>Alimentação</Text>
       </Pressable>
-
-      <Pressable
-        onPress={() => navigation.navigate("Manejo")}
-        style={styles.botaos}
-      >
-        <Image style={styles.imagem} source={require(ImgManejo)} />
-        <Text style={styles.Texto}> Manejo </Text>
-      </Pressable>
-
+            <Pressable style={styles.botaos} onPress={() => navigation.navigate("Manejo") }>
+                <Image style={styles.imagem} source={require(ImgManejo)} />
+                <Text style={styles.Texto}>   Manejo </Text>
+            </Pressable>
       <View style={styles.botaovoltar}>
         <Button
           color="#008000"
