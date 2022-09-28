@@ -4,7 +4,7 @@ import { createDrawerNavigator } from "@react-navigation/drawer";
 import { Ionicons, MaterialCommunityIcons, MaterialIcons } from "@expo/vector-icons";
 import CadastroFaz from "../pages/CadastroFaz";
 import StackRoutes from "../Routes/stackRoutes";
-import PageListavacas from "../pages/Vacas";
+import PageListavacas from "../pages/PageListavacas";
 import PageLancavacas from "../pages/Contasvaca";
 import GeralFaz from "../pages/GeralFaz";
 import CadastroReb from "../pages/CadastroReb";

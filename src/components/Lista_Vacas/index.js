@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   View,
   Button,
@@ -8,24 +8,44 @@ import {
   Dimensions,
 } from "react-native";
 import { FlatList } from "react-native-gesture-handler";
-import dataVacas from "./vacas";
+import { dataVacas } from "./vacas";
+
+import Modal from "react-native-modal";
 
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
 
 function Lista_vacas() {
+  const [isModalVisible, setModalVisible] = useState(false);
+
+  const toggleModal = () => {
+    setModalVisible(!isModalVisible);
+  }
   return (
     <View style={styles.Tudocont}>
+      <View style={{ flex: 1 }}>
+        <Modal isVisible={isModalVisible}>
+          <View style={{ flex: 1 }}>
+            <Text>Hello!</Text>
+            <Button title="Hide modal" onPress={toggleModal} />
+          </View>
+        </Modal>
+      </View>
       <FlatList
         data={dataVacas}
+        keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
           <View style={styles.containerVacas}>
-            <TouchableOpacity activeOpacity={0.5} style={styles.cardVacas}>
+            <TouchableOpacity
+              activeOpacity={0.5}
+              style={styles.cardVacas}
+              onPress={toggleModal}
+            >
               <Text style={styles.textVacas}>{item.name}</Text>
             </TouchableOpacity>
+
           </View>
         )}
-        keyExtractor={(item) => item.id}
       />
     </View>
   );
@@ -52,7 +72,7 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingTop: "5%",
     paddingBottom: "1%",
-    width:windowWidth,
+    width: windowWidth,
   },
 
 });

@@ -17,7 +17,7 @@ function PageListavacas({ navigation }) {
                 <Lista_vacas />
                 <View style={styles.contvoltar}>
                     <TouchableOpacity style={styles.botaovoltar} onPress={() => navigation.goBack()}>
-                        <Text>Voltar</Text>
+                        <Text style={styles.textovoltar}>Voltar</Text>
                     </TouchableOpacity>
                 </View>
             </SafeAreaView>
@@ -35,18 +35,25 @@ const styles = StyleSheet.create({
 
     },
     contvoltar: {
-        paddingTop: "10%",
-        paddingBottom: "10%",
-        paddingEnd: "10%",
-        paddingStart: "10%",
+        paddingTop: "5%",
+        paddingBottom: "8%",
+        paddingStart: "6%",
+        paddingEnd: "6%",
         color: '#008000',
-
+        
+        
     },
     botaovoltar: {
-        color: '#008000',
+        backgroundColor: '#008000',
+        width: "100%",
+        height: 40,
+        alignItems: "center",
+        justifyContent: "center",
+        borderRadius: 18,
     },
-    listavaca: {
-        paddingTop: "1%"
+    textovoltar: {
+        color: "white",
+        fontSize: 18,
     }
 
 
