@@ -12,7 +12,7 @@ import Header from "../../components/Header";
 import { MaterialCommunityIcons, MaterialIcons } from "@expo/vector-icons";
 import { FontAwesome5 } from '@expo/vector-icons';
 function Manejo({ navigation }) {
-    const imgbg1 = "c:/Users/samue/Documents/GitHub/FazFin/assets/bg10.jpg"
+    const imgbg1 = "../../../assets/bg10.jpg"
     return (
         <ImgBg source={require(imgbg1)} imageStyle={{ opacity: 0.5 }}>
             <Header title="Olá, Carlos" />
@@ -23,13 +23,13 @@ function Manejo({ navigation }) {
                         {"Vacina e Remedios"}
                     </TituloBotao2>
                 </BotaoPress2>
-                <BotaoPress2 onPress={() => navigation.navigate("PageListavacas")}>
+                <BotaoPress2 onPress={() => navigation.navigate("VacinaRem")}>
                     <TituloBotao2>
                     <MaterialCommunityIcons name="hammer-screwdriver" size={35} color="white" />
                         {"Mão de obra"}
                     </TituloBotao2>
                 </BotaoPress2>
-                <BotaoPress2 onPress={() => navigation.navigate("PageLancavacas")}>
+                <BotaoPress2 onPress={() => navigation.navigate("VacinaRem")}>
                     <TituloBotao2>
                         <FontAwesome5 name="tractor" size={35} color="white" />
                         {"Outros"}
