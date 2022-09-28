@@ -14,7 +14,6 @@ import GeralFaz from "../pages/GeralFaz";
 import CadastroReb from "../pages/CadastroReb";
 import Manejo from "../pages/Manejo";
 import GeralReb from "../pages/GeralReb";
-
 const Drawer = createDrawerNavigator();
 function Routes() {
   return (

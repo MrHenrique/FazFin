@@ -9,6 +9,7 @@ import Manejo from "../pages/Manejo";
 import GeralReb from "../pages/GeralReb";
 import PageLancavacas from "../pages/PageLancavacas";
 import PageListavacas from "../pages/PageListavacas";
+import FinanceiroFaz from "../pages/FinanceiroFaz";
 const Stack = createNativeStackNavigator();
 function StackRoutes() {
   return (
@@ -69,6 +70,12 @@ function StackRoutes() {
           headerShown: false,
         }}
       />
+      <Stack.Screen
+        name="FinanceiroFaz"
+        component={FinanceiroFaz}
+        options={{
+          headerShown: false,
+        }} />
     </Stack.Navigator>
   );
 }

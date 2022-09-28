@@ -21,17 +21,17 @@ function GeralFaz({ navigation }) {
     <ImgBg source={require(imgbg1)} imageStyle={{ opacity: 0.5 }}>
       <Header title="Olá, Carlos" />
       <AreaCont>
-        <BannerButton>
-          <BannerText>{"Verificar o balanço da Fazenda."}</BannerText>
-          <TextoBanner>
-            {"Receita Mensal: "}
-            <TextoBannerRec>{"R$ 5000,00"}</TextoBannerRec>
-          </TextoBanner>
-          <TextoBanner>
-            {"Gasto Mensal: "}
-            <TextoBannerDes>{"R$ 3500,00"}</TextoBannerDes>
-          </TextoBanner>
-          <TextoBanner>{"Total Mensal: R$ 1500,00"}</TextoBanner>
+        <BannerButton onPress={() => navigation.navigate("FinanceiroFaz")}>
+            <BannerText>{"Verificar o balanço da Fazenda."}</BannerText>
+            <TextoBanner>
+              {"Receita Mensal: "}
+              <TextoBannerRec>{"R$ 5000,00"}</TextoBannerRec>
+            </TextoBanner>
+            <TextoBanner>
+              {"Gasto Mensal: "}
+              <TextoBannerDes>{"R$ 3500,00"}</TextoBannerDes>
+            </TextoBanner>
+            <TextoBanner>{"Total Mensal: R$ 1500,00"}</TextoBanner>
         </BannerButton>
         <BotaoPress2 onPress={() => navigation.navigate("CadastroReb")}>
           <TituloBotao>{"Cadastrar ou modificar rebanhos"}</TituloBotao>
