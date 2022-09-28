@@ -3,12 +3,6 @@ export const AreaCont = styled.View`
   align-items: center;
   flex: 1;
 `;
-export const Texto = styled.Text`
-  font-weight: bold;
-  font-size: 18px;
-  text-align: center;
-  color: #fff;
-`;
 export const BotaoPress = styled.TouchableOpacity`
   align-items: center;
   justify-content: center;
@@ -16,7 +10,7 @@ export const BotaoPress = styled.TouchableOpacity`
   background: rgba(15, 109, 0, 0.9);
   width: 360px;
   height: 40px;
-  bottom: -60px;
+  bottom: -100px;
   margin: 10px;
 `;
 export const BotaoPress2 = styled.TouchableOpacity`
@@ -25,12 +19,18 @@ export const BotaoPress2 = styled.TouchableOpacity`
   border-radius: 15px;
   background: rgba(15, 109, 0, 0.9);
   width: 360px;
-  height: 40px;
-  margin-top: 70px;
-  margin-bottom: 30px;
+  height: 100px;
+  margin-top: 50px;
+  margin-bottom: -30px;
 `;
 export const TituloBotao = styled.Text`
   font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.25px;
+  color: #fff;
+`;
+export const TituloBotao2 = styled.Text`
+  font-size: 35px;
   font-weight: bold;
   letter-spacing: 0.25px;
   color: #fff;

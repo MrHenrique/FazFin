@@ -1,11 +1,10 @@
 import styled from "styled-components";
 
-export const Container = styled.SafeAreaView `
+export const Container = styled.SafeAreaView`
   height: 65px;
   flex-direction: row-reverse;
   align-items: center;
   padding-left: 14px;
-  
   background: rgba(15, 109, 0, 0.8);
 `;
 

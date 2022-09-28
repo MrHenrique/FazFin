@@ -1,8 +1,11 @@
 import React from "react";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 
-import { Ionicons } from "@expo/vector-icons";
-
+import {
+  Ionicons,
+  MaterialCommunityIcons,
+  MaterialIcons,
+} from "@expo/vector-icons";
 import CadastroFaz from "../pages/CadastroFaz";
 import StackRoutes from "../Routes/stackRoutes";
 import PageListavacas from "../pages/PageListavacas";
@@ -50,6 +53,92 @@ function Routes() {
           drawerIcon: ({ focused, size, color }) => (
             <Ionicons
               name={focused ? "person-add" : "person-add-outline"}
+              size={size}
+              color={color}
+            />
+          ),
+        }}
+      />
+      <Drawer.Screen
+        name="Vacas"
+        component={PageListavacas}
+        options={{
+          title: "Lista de Vacas",
+          drawerIcon: ({ focused, size, color }) => (
+            <MaterialCommunityIcons
+              name={focused ? "account-cowboy-hat" : "account-cowboy-hat"}
+              size={size}
+              color={color}
+            />
+          ),
+        }}
+      />
+      <Drawer.Screen
+        name="Contas"
+        component={PageLancavacas}
+        options={{
+          title: "Lancar contas",
+          drawerIcon: ({ focused, size, color }) => (
+            <MaterialIcons
+              name={focused ? "attach-money" : "attach-money"}
+              size={size}
+              color={color}
+            />
+          ),
+        }}
+      />
+      <Drawer.Screen
+        name="Visão geral de Fazenda"
+        component={GeralFaz}
+        options={{
+          title: "Visão geral de Fazenda",
+          drawerIcon: ({ focused, size, color }) => (
+            <MaterialCommunityIcons
+              name={focused ? "finance" : "finance"}
+              size={size}
+              color={color}
+            />
+          ),
+        }}
+      />
+      <Drawer.Screen
+        name="Cadastro Rebanho"
+        component={CadastroReb}
+        options={{
+          title: "Cadastro Rebanho",
+          drawerIcon: ({ focused, size, color }) => (
+            <MaterialCommunityIcons
+              name={focused ? "cow-off" : "cow"}
+              size={size}
+              color={color}
+            />
+          ),
+        }}
+      />
+      <Drawer.Screen
+        name="Manejo"
+        component={Manejo}
+        options={{
+          title: "Manejo",
+          drawerIcon: ({ focused, size, color }) => (
+            <MaterialCommunityIcons
+              name={focused ? "cow-off" : "cow"}
+              size={size}
+              color={color}
+            />
+          ),
+        }}
+      />
+      <Drawer.Screen
+        name="Visão geral de rebanho"
+        component={GeralReb}
+        options={{
+          title: "Visão geral de rebanho",
+          drawerIcon: ({ focused, size, color }) => (
+            <MaterialCommunityIcons
+              name={
+                focused ? "calculator-variant-outline" : "calculator-variant"
+              }
               size={size}
               color={color}
             />

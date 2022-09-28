@@ -1,8 +1,22 @@
 import React from "react";
+import {
+  Texto,
+  TituloBotao,
+  BotaoPress,
+  AreaCont,
+  BannerButton,
+  TextoBannerRec,
+  TextoBannerDes,
+  TextoBanner,
+  BannerText,
+  BotaoPress2,
+  ImgBg,
+} from "./styles";
 import Header from "../../components/Header";
-import { AreaCont, Container, ImgBg } from "../Home/styles";
-function GeralFaz() {
-  const imgbg1 = "../../../assets/background7.jpg";
+import { rebanhos } from "../../components/Select/data";
+import Select from "../../components/Select";
+function GeralFaz({ navigation }) {
+  const imgbg1 = "../../../assets/bg4.jpg";
   return (
     <ImgBg source={require(imgbg1)} imageStyle={{ opacity: 0.5 }}>
       <Header title="Olá, Carlos" />
@@ -40,3 +54,4 @@ function GeralFaz() {
     </ImgBg>
   );
 }
+export default GeralFaz;

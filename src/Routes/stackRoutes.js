@@ -26,7 +26,48 @@ function StackRoutes() {
         component={CadastroFaz}
         options={{
           headerShown: false,
-          title: "Cadastro",
+        }}
+      />
+      <Stack.Screen
+        name="GeralFaz"
+        component={GeralFaz}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="CadastroReb"
+        component={CadastroReb}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="Manejo"
+        component={Manejo}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="GeralReb"
+        component={GeralReb}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="PageLancavacas"
+        component={PageLancavacas}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="PageListavacas"
+        component={PageListavacas}
+        options={{
+          headerShown: false,
         }}
       />
       <Stack.Screen

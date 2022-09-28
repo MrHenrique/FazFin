@@ -1,11 +1,8 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, TouchableOpacity } from "react-native";
-import Header from "../../components/Header";
 import {
   Container,
   Texto,
   Logo,
-  Title,
   ImgBg,
   TituloBotao,
   BotaoPress,
@@ -13,7 +10,7 @@ import {
   CampoTexto,
 } from "./styles";
 import { useNavigation } from "@react-navigation/native";
-
+import { Alert } from "react-native";
 function CadastroFaz() {
   const [nomefaz, setNomefaz] = useState("");
   const [proprietario, setProprietario] = useState("");
@@ -26,12 +23,14 @@ function CadastroFaz() {
     };
     console.log(data);
   }
+  const CadSucess = () => {
+    Alert.alert("Cadastro com sucesso!");
+  };
   const navigation = useNavigation();
   const imgbg1 = "../../../assets/backgroundCad.jpg";
   return (
     <Container>
       <ImgBg source={require(imgbg1)} imageStyle={{ opacity: 0.5 }}>
-        <Header title="Cadastro de Fazenda" />
         <AreaCont>
           <Logo source={require("../../../assets/FazFin.png")} />
           <Texto>Nome da fazenda</Texto>
@@ -52,14 +51,10 @@ function CadastroFaz() {
             value={tipoprod}
             placeholder="Ex: Pecuaria Leiteira"
           ></CampoTexto>
-          <BotaoPress>
+          <BotaoPress onPress={CadSucess}>
             <TituloBotao>{"Cadastrar"}</TituloBotao>
           </BotaoPress>
-          <BotaoPress
-            onPress={() => {
-              navigation.goBack();
-            }}
-          >
+          <BotaoPress onPress={() => navigation.navigate("Home")}>
             <TituloBotao>{"Voltar"}</TituloBotao>
           </BotaoPress>
         </AreaCont>
