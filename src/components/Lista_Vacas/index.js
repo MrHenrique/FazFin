@@ -17,20 +17,49 @@ const windowHeight = Dimensions.get("window").height;
 
 function Lista_vacas() {
   const [isModalVisible, setModalVisible] = useState(false);
+  const [isModalVisible2, setModalVisible2] = useState(false);
   const [Details, setDetails] = useState([]);
 
   function toggleModal() {
     setModalVisible(!isModalVisible);
   }
+  function toggleModal2() {
+    setModalVisible2(!isModalVisible2);
+  }
   return (
     <View style={styles.Tudocont}>
       <View style={{ flex: 1 }}>
-        <Modal isVisible={isModalVisible}>
+        <Modal
+          isVisible={isModalVisible}
+          coverScreen={true}
+          backdropColor={"#008AA1"}
+        >
           <View style={{ flex: 1, }}>
-            <Text style={{ color: "white", fontSize: 20, }}>nome: {Details.name}, id: {Details.id}</Text>
-            <Button title="Voltar" onPress={() => {
-              toggleModal();
-            }} />
+            <View style={styles.containermodal}>
+              <Text style={styles.titulo}>
+                {Details.name}</Text>
+              <Button title="Voltar" onPress={() => {
+                toggleModal();
+              }} />
+              <Button title="Voltar" onPress={() => {
+                toggleModal2();
+              }} />
+            </View>
+            <Modal
+              isVisible={isModalVisible2}
+              coverScreen={true}
+              backdropColor={"#008AA1"}
+            >
+              <View style={{ flex: 1, }}>
+                <View style={styles.containermodal}>
+                  <Text style={styles.titulo}>
+                    {Details.name}</Text>
+                  <Button title="Voltar" onPress={() => {
+                    toggleModal2();
+                  }} />
+                </View>
+              </View>
+            </Modal>
           </View>
         </Modal>
       </View>
@@ -80,6 +109,20 @@ const styles = StyleSheet.create({
     paddingTop: "5%",
     paddingBottom: "1%",
     width: windowWidth,
+  },
+  containermodal: {
+    backgroundColor: "white",
+    borderRadius: 5,
+    height: "100%",
+    padding: 20
+  },
+  titulo: {
+    fontSize: 45,
+    textAlign: "center",
+    backgroundColor: "#f2f2f2",
+    borderRadius: 20,
+    margin: 10,
+
   },
 
 });
