@@ -1,21 +1,21 @@
 import { PieChart } from "react-native-chart-kit";
 import { View, Text, Dimensions, StyleSheet } from "react-native";
-function PieChartTest() {
-    const screenWidth = Dimensions.get("window").width;
+const { height, width } = Dimensions.get("window");
+function PieChartFaz() {
   const data = [
     {
-      name: "Faturamento",
+      name: "",
       valor: 5000,
-      color: "green",
-      legendFontColor: "#000000",
-      legendFontSize: 15,
+      color: "rgba(15, 109, 0, 1)",
+      legendFontColor: "#FFF",
+      legendFontSize: height * 0.027,
     },
     {
-      name: "Despesas",
+      name: "",
       valor: 2500,
-      color: "#F00",
-      legendFontColor: "#000000",
-      legendFontSize: 15,
+      color: "red",
+      legendFontColor: "#FFF",
+      legendFontSize: height * 0.027,
     },
   ];
   const chartConfig = {
@@ -31,15 +31,14 @@ function PieChartTest() {
   return (
       <PieChart
         data={data}
-        width={screenWidth}
-        height={220}
+        width={width*0.8}
+        height={height*0.25}
         chartConfig={chartConfig}
         accessor={"valor"}
         backgroundColor={"transparent"}
-        paddingLeft={"5"}
-        absolute    
+        paddingLeft={width*0.1}
+        absolute
       />
   );
 }
-export default PieChartTest;
-    
+export default PieChartFaz;

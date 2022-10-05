@@ -1,6 +1,5 @@
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-
 import Home from "../pages/Home";
 import CadastroFaz from "../pages/CadastroFaz";
 import GeralFaz from "../pages/GeralFaz";
@@ -11,6 +10,7 @@ import PageLancavacas from "../pages/PageLancavacas";
 import PageListavacas from "../pages/PageListavacas";
 import VacinaRem from "../pages/VacinaRem";
 import FinanceiroFaz from "../pages/FinanceiroFaz";
+import MaodeObra from "../pages/MaodeObra";
 const Stack = createNativeStackNavigator();
 function StackRoutes() {
   return (
@@ -84,6 +84,12 @@ function StackRoutes() {
         options={{
           headerShown: false,
         }} />
+    <Stack.Screen
+      name="MaodeObra"
+      component={MaodeObra}
+      options={{
+        headerShown: false,
+      }}/>
     </Stack.Navigator>
     
   );

@@ -6,9 +6,12 @@ import {
   Modal,
   SafeAreaView,
   View,
+  Dimensions,
 } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { FlatList } from "react-native-gesture-handler";
+
+const { height, width } = Dimensions.get("window");
 const Touchable = (
   text = "Selecione sua fazenda",
   onPress,
@@ -99,14 +102,18 @@ const Select = ({
   return (
     <>
       <TouchableComponent />
-      <Modal visible={visible} animationType="slide">
+      <Modal visible={visible} animationType="fade">
         <SafeAreaView style={{ flex: 1 }}>
           <View style={styles.header}>
             <View style={styles.titleContainer}>
               <Text style={styles.title}>{title}</Text>
             </View>
             <TouchableOpacity onPress={() => setVisible(false)}>
-              <MaterialCommunityIcons name="close" size={24} color="white" />
+              <MaterialCommunityIcons
+                name="close"
+                size={width * 0.08}
+                color="white"
+              />
             </TouchableOpacity>
           </View>
           <FlatList
@@ -128,34 +135,31 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    paddingHorizontal: 12,
-    paddingVertical: 12,
+    height: height * 0.08,
     borderBottomColor: "white",
-    borderBottomWidth: 1,
-    width: 300,
+    borderBottomWidth: width * 0.004,
+    width: width * 0.8,
   },
   touchableText: {
     color: "white",
-    fontSize: 14,
-    fontWeight: "600",
+    fontSize: width * 0.05,
+    fontWeight: "bold",
   },
   header: {
-    height: 45,
+    height: height * 0.1,
     backgroundColor: "#004513",
     borderBottomColor: "#00290C",
-    borderBottomWidth: 1,
+    borderBottomWidth: width * 0.004,
     flexDirection: "row-reverse",
     alignItems: "center",
-    paddingBottom: 8,
-    paddingTop: 8,
-    paddingHorizontal: 12,
+    paddingVertical: height * 0.012,
+    paddingHorizontal: width * 0.048,
   },
   titleContainer: {
     flex: 1,
   },
   title: {
-    fontSize: 20,
-    marginLeft: -38,
+    fontSize: width * 0.08,
     fontWeight: "bold",
     color: "white",
     textAlign: "center",
@@ -165,14 +169,14 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    paddingHorizontal: 12,
-    paddingVertical: 12,
+    paddingVertical: height * 0.012,
+    paddingHorizontal: width * 0.048,
     borderBottomColor: "#00290C",
-    borderBottomWidth: 1,
+    borderBottomWidth: width * 0.004,
   },
   optionText: {
     color: "white",
-    fontSize: 14,
+    fontSize: width * 0.055,
   },
 });
 export default Select;

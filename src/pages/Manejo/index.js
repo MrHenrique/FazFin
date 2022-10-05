@@ -23,7 +23,7 @@ function Manejo({ navigation }) {
                         {"Vacina e Remedios"}
                     </TituloBotao2>
                 </BotaoPress2>
-                <BotaoPress2 onPress={() => navigation.navigate("VacinaRem")}>
+                <BotaoPress2 onPress={() => navigation.navigate("MaodeObra")}>
                     <TituloBotao2>
                     <MaterialCommunityIcons name="hammer-screwdriver" size={35} color="white" />
                         {"Mão de obra"}
