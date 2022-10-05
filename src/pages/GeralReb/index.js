@@ -18,7 +18,7 @@ function GeralReb({ navigation }) {
       <ImageBackground
         style={styles.imgbg}
         source={require(imgbg1)}
-        imageStyle={{ opacity: 0.5 }}
+        imageStyle={{ opacity: 0.6 }}
       >
         <Header title="Olá, Carlos" />
         <TouchableOpacity style={styles.bannerButton}>

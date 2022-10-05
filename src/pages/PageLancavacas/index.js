@@ -21,7 +21,7 @@ function PageLancavacas({ navigation }) {
       <ImageBackground
         style={styles.imgbg}
         source={require(imgbg1)}
-        imageStyle={{ opacity: 0.5 }}
+        imageStyle={{ opacity: 0.6 }}
       >
         <Header title="Lançar Contas" />
 
