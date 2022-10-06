@@ -1,14 +1,13 @@
 import React from "react";
 import { Feather } from "@expo/vector-icons";
 import {
-  Dimensions,
   SafeAreaView,
   Text,
   TouchableOpacity,
   StyleSheet,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-const { height, width } = Dimensions.get("window");
+import { scale, verticalScale } from "react-native-size-matters";
 function Header({ title }) {
   const navigation = useNavigation();
   return (
@@ -17,7 +16,7 @@ function Header({ title }) {
         style={styles.menuButton}
         onPress={() => navigation.openDrawer()}
       >
-        <Feather name="menu" size={height * 0.045} color="#FFF" />
+        <Feather name="menu" size={verticalScale(30)} color="#FFF" />
       </TouchableOpacity>
       <Text style={styles.title}>{title}</Text>
     </SafeAreaView>
@@ -28,17 +27,17 @@ const styles = StyleSheet.create({
     flexDirection: "row-reverse",
     alignItems: "center",
     backgroundColor: "rgba(15, 109, 0, 0.9)",
-    height: height * 0.07,
-    paddingLeft: width * 0.03,
+    height: verticalScale(50),
+    paddingLeft: scale(10),
   },
   menuButton: {
-    height: height * 0.075,
+    height: verticalScale(30),
     justifyContent: "center",
-    paddingLeft: width * 0.03,
+    paddingLeft: scale(15),
   },
   title: {
     color: "#FFF",
-    fontSize: height * 0.036,
+    fontSize: verticalScale(25),
     fontWeight: "bold",
   },
 });

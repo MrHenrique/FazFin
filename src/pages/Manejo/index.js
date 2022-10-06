@@ -10,6 +10,7 @@ import {
 import Header from "../../components/Header";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { FontAwesome5 } from "@expo/vector-icons";
+import { scale, verticalScale } from "react-native-size-matters";
 const { height, width } = Dimensions.get("window");
 function Manejo({ navigation }) {
   const imgbg1 = "../../../assets/bg10.jpg";
@@ -28,31 +29,31 @@ function Manejo({ navigation }) {
           <Text style={styles.tituloBotao2}>
             <MaterialCommunityIcons
               name="hospital-box-outline"
-              size={width * 0.09}
+              size={scale(30)}
               color="white"
             />
             {"Vacina e Remedios"}
           </Text>
         </TouchableOpacity>
         <TouchableOpacity
-          style={styles.botaoPress2}
+          style={styles.botaoPress3}
           onPress={() => navigation.navigate("MaodeObra")}
         >
           <Text style={styles.tituloBotao2}>
             <MaterialCommunityIcons
               name="hammer-screwdriver"
-              size={width * 0.09}
+              size={scale(30)}
               color="white"
             />
             {"Mão de obra"}
           </Text>
         </TouchableOpacity>
         <TouchableOpacity
-          style={styles.botaoPress2}
+          style={styles.botaoPress4}
           onPress={() => navigation.navigate("VacinaRem")}
         >
           <Text style={styles.tituloBotao2}>
-            <FontAwesome5 name="tractor" size={width * 0.09} color="white" />
+            <FontAwesome5 name="tractor" size={scale(30)} color="white" />
             {"Outros"}
           </Text>
         </TouchableOpacity>
@@ -79,41 +80,54 @@ const styles = StyleSheet.create({
   botaoPress2: {
     borderRadius: 20,
     backgroundColor: "rgba(15, 109, 0, 0.9)",
-    width: width * 0.8,
-    height: height * 0.15,
-    margin: height * 0.1,
-    marginBottom: height * -0.025,
-    alignSelf: "center",
+    width: scale(300),
+    height: verticalScale(150),
+    alignItems: "center",
     justifyContent: "center",
+    alignSelf: "center",
+    top: verticalScale(75),
+    position: "absolute",
+  },
+  botaoPress3: {
+    borderRadius: 20,
+    backgroundColor: "rgba(15, 109, 0, 0.9)",
+    width: scale(300),
+    height: verticalScale(150),
+    alignItems: "center",
+    justifyContent: "center",
+    alignSelf: "center",
+    top: verticalScale(250),
+    position: "absolute",
+  },
+  botaoPress4: {
+    borderRadius: 20,
+    backgroundColor: "rgba(15, 109, 0, 0.9)",
+    width: scale(300),
+    height: verticalScale(150),
+    alignItems: "center",
+    justifyContent: "center",
+    alignSelf: "center",
+    top: verticalScale(425),
+    position: "absolute",
   },
   tituloBotao2: {
-    fontSize: height * 0.04,
+    fontSize: scale(25),
     fontWeight: "bold",
-    color: "#ffffff",
-    alignSelf: "center",
-    right: width * 0.025
+    color: "#fff",
   },
   botaopress: {
     borderRadius: 20,
     backgroundColor: "rgba(15, 109, 0, 0.9)",
-    width: width * 0.9,
-    height: height * 0.06,
+    width: scale(300),
+    height: verticalScale(40),
     alignItems: "center",
     justifyContent: "center",
-    marginVertical: height * 0.015,
     alignSelf: "center",
-    bottom: height * -0.14,
+    top: verticalScale(625),
+    position: "absolute",
   },
   tituloBotao: {
-    fontSize: height * 0.02,
-    fontWeight: "bold",
-    color: "#fff",
-  },
-  viewtext: {
-    alignSelf: "center",
-  },
-  texto: {
-    fontSize: height * 0.02,
+    fontSize: verticalScale(14),
     fontWeight: "bold",
     color: "#fff",
   },

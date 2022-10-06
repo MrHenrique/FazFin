@@ -5,13 +5,12 @@ import {
   TouchableOpacity,
   ImageBackground,
   StyleSheet,
-  Dimensions,
   SafeAreaView,
 } from "react-native";
+import { scale, verticalScale } from "react-native-size-matters";
 import Header from "../../components/Header";
 import { rebanhos } from "../../components/Select/data";
 import Select from "../../components/Select";
-const { height, width } = Dimensions.get("window");
 function GeralFaz({ navigation }) {
   const imgbg1 = "../../../assets/bg4.jpg";
   return (
@@ -43,7 +42,7 @@ function GeralFaz({ navigation }) {
           </Text>
         </TouchableOpacity>
         <TouchableOpacity
-          style={styles.botaoPress2}
+          style={styles.botaoPress3}
           onPress={() => navigation.navigate("CadastroReb")}
         >
           <Text style={styles.tituloBotao2}>
@@ -67,7 +66,7 @@ function GeralFaz({ navigation }) {
           <Text style={styles.tituloBotao}>{"Continuar"}</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          style={styles.botaopress}
+          style={styles.botaopress2}
           onPress={() => navigation.navigate("Home")}
         >
           <Text style={styles.tituloBotao}>{"Voltar"}</Text>
@@ -88,74 +87,89 @@ const styles = StyleSheet.create({
   },
   bannerButton: {
     borderRadius: 30,
-    height: height * 0.25,
-    width: width * 0.8,
+    height:verticalScale(150),
+    width: scale(300),
     alignSelf: "center",
     backgroundColor: "rgba(15,109,0,0.9)",
-    bottom: height * -0.05,
+    justifyContent: "center",
+    position: "absolute",
+    top: verticalScale(75),
   },
   bannerText: {
     color: "#fff",
-    fontSize: width * 0.05,
+    fontSize: scale(20),
     fontWeight: "bold",
-    margin: width * 0.015,
-    marginTop: height * 0.03,
+    margin: verticalScale(5),
     alignSelf: "center",
   },
   textoBannerT: {
     textAlign: "center",
-    margin: width * 0.005,
+    fontSize: scale(17),
   },
   textoBanner: {
     color: "#fff",
-    fontSize: width * 0.045,
+    fontSize: scale(15),
   },
   textoBannerRec: {
     color: "#0FFF50",
-    fontSize: width * 0.045,
+    fontSize: scale(17),
   },
   textoBannerDes: {
     color: "#FF3131",
-    fontSize: width * 0.045,
+    fontSize: scale(17),
   },
-  botaoPress2: {
+  botaoPress3: {
     borderRadius: 20,
     backgroundColor: "rgba(15, 109, 0, 0.9)",
-    width: width * 0.8,
-    height: height * 0.08,
-    margin: width * 0.15,
-    alignSelf: "center",
-    justifyContent: "center",
+    width: scale(300),
+    height: verticalScale(75),
     alignItems: "center",
+    justifyContent: "center",
+    alignSelf: "center",
+    top: verticalScale(250),
+    position: "absolute",
   },
   tituloBotao2: {
-    fontSize: width * 0.045,
+    fontSize: scale(17),
     fontWeight: "bold",
     color: "#fff",
   },
   botaopress: {
     borderRadius: 20,
     backgroundColor: "rgba(15, 109, 0, 0.9)",
-    width: width * 0.9,
-    height: height * 0.06,
+    width: scale(300),
+    height: verticalScale(40),
     alignItems: "center",
     justifyContent: "center",
-    marginVertical: height * 0.015,
     alignSelf: "center",
-    bottom: height * -0.1,
+    top: verticalScale(575),
+    position: "absolute",
+  },
+  botaopress2: {
+    borderRadius: 20,
+    backgroundColor: "rgba(15, 109, 0, 0.9)",
+    width: scale(300),
+    height: verticalScale(40),
+    alignItems: "center",
+    justifyContent: "center",
+    alignSelf: "center",
+    top: verticalScale(625),
+    position: "absolute",
   },
   tituloBotao: {
-    fontSize: height * 0.02,
+    fontSize: verticalScale(14),
     fontWeight: "bold",
     color: "#fff",
   },
   viewtext: {
     alignSelf: "center",
+    position: "absolute",
+    top: verticalScale(350),
   },
   texto: {
-    fontSize: height * 0.03,
+    fontSize: verticalScale(20),
     color: "#ffffff",
-    textAlign: "center",
+    alignSelf: "center",
   },
 });
 export default GeralFaz;

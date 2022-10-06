@@ -10,10 +10,10 @@ import {
   ImageBackground,
 } from "react-native";
 import Header from "../../components/Header";
+import { scale, verticalScale } from "react-native-size-matters";
 const ImgLeite = "../../../assets/milk-bottle.png";
 const ImgAliment = "../../../assets/cow.png";
 const ImgManejo = "../../../assets/smart-farm.png";
-const { height, width } = Dimensions.get("window");
 function PageLancavacas({ navigation }) {
   const imgbg1 = "../../../assets/bg11.jpg";
   return (
@@ -28,19 +28,25 @@ function PageLancavacas({ navigation }) {
         <View style={styles.areabotao}>
           <TouchableOpacity style={styles.botaos}>
             <Text style={styles.Texto}>
-              <Image style={styles.imagem} source={require(ImgLeite)} />  Leite
+              <Image style={styles.imagem} source={require(ImgLeite)} />
+              Leite
             </Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.botaos}>
+          <TouchableOpacity style={styles.botaos2}>
             <Text style={styles.Texto}>
-              <Image style={styles.imagem} source={require(ImgAliment)} />  Alimentação
+              <Image style={styles.imagem} source={require(ImgAliment)} />
+              Alimentação
             </Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.botaos}onPress={() => navigation.navigate("Manejo")}>
+          <TouchableOpacity
+            style={styles.botaos3}
+            onPress={() => navigation.navigate("Manejo")}
+          >
             <Text style={styles.Texto}>
-              <Image style={styles.imagem} source={require(ImgManejo)} />  Manejo
+              <Image style={styles.imagem} source={require(ImgManejo)} />
+              Manejo
             </Text>
           </TouchableOpacity>
 
@@ -60,42 +66,55 @@ const styles = StyleSheet.create({
   botaos: {
     borderRadius: 20,
     backgroundColor: "rgba(15, 109, 0, 0.9)",
-    width: width * 0.8,
-    height: height * 0.15,
-    margin: height * 0.1,
-    marginBottom: height * -0.025,
-    alignSelf: "center",
+    width: scale(300),
+    height: verticalScale(150),
+    alignItems: "center",
     justifyContent: "center",
+    alignSelf: "center",
+    top: verticalScale(25),
+    position: "absolute",
+  },
+  botaos2: {
+    borderRadius: 20,
+    backgroundColor: "rgba(15, 109, 0, 0.9)",
+    width: scale(300),
+    height: verticalScale(150),
+    alignItems: "center",
+    justifyContent: "center",
+    alignSelf: "center",
+    top: verticalScale(200),
+    position: "absolute",
+  },
+  botaos3: {
+    borderRadius: 20,
+    backgroundColor: "rgba(15, 109, 0, 0.9)",
+    width: scale(300),
+    height: verticalScale(150),
+    alignItems: "center",
+    justifyContent: "center",
+    alignSelf: "center",
+    top: verticalScale(375),
+    position: "absolute",
   },
   Texto: {
-    fontSize: height * 0.05,
-    fontWeight: "bold",
-    color: "#ffffff",
-    alignSelf: "center",
-    right: width * 0.025
-  },
-  areabotao: {
-    alignSelf: "center",
-  },
-  Texto1: {
-    fontSize: width * 0.045,
+    fontSize: scale(35),
     fontWeight: "bold",
     color: "#fff",
+  },
+  imagem: {
+    width: scale(40),
+    height: scale(40),
   },
   voltar: {
     borderRadius: 20,
     backgroundColor: "rgba(15, 109, 0, 0.9)",
-    width: width * 0.9,
-    height: height * 0.06,
+    width: scale(300),
+    height: verticalScale(40),
     alignItems: "center",
     justifyContent: "center",
-    marginVertical: height * 0.015,
     alignSelf: "center",
-    bottom: height * -0.14,
-  },
-  imagem: {
-    height: width * 0.10,
-    width: width * 0.10,
+    top: verticalScale(575),
+    position: "absolute",
   },
   ContainerTudo: {
     flex: 1,
@@ -108,7 +127,7 @@ const styles = StyleSheet.create({
   },
 
   tituloBotao: {
-    fontSize: height * 0.02,
+    fontSize: verticalScale(14),
     fontWeight: "bold",
     color: "#fff",
   },

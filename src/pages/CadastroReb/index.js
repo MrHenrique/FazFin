@@ -9,11 +9,10 @@ import {
   ImageBackground,
   TextInput,
   StyleSheet,
-  Dimensions,
   Alert,
 } from "react-native";
+import { scale, verticalScale } from "react-native-size-matters";
 import { useNavigation } from "@react-navigation/native";
-const { height, width } = Dimensions.get("window");
 function CadastroReb() {
   const CadSucess = () => {
     Alert.alert("Cadastro com sucesso!");
@@ -61,7 +60,7 @@ function CadastroReb() {
           <Text style={styles.tituloBotao}>{"Cadastrar"}</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          style={styles.botaopress}
+          style={styles.botaopress2}
           onPress={() => navigation.navigate("GeralFaz")}
         >
           <Text style={styles.tituloBotao}>{"Voltar"}</Text>
@@ -82,43 +81,57 @@ const styles = StyleSheet.create({
   },
   logo: {
     resizeMode: "contain",
-    height: height * 0.15,
-    width: width * 0.3,
-    marginVertical: height * 0.04,
+    height: verticalScale(90),
+    width: verticalScale(90),
+    position: "absolute",
+    top: verticalScale(75),
     alignSelf: "center",
   },
   texto: {
-    color: "#ffffff",
-    fontWeight: "bold",
+    fontSize: verticalScale(18),
     textAlign: "center",
-    fontSize: height * 0.025,
+    color: "#fff",
+    fontWeight: "bold",
+    alignSelf: "center",
   },
   viewtext: {
     alignSelf: "center",
-    marginVertical: height * 0.05,
+    position: "absolute",
+    top: verticalScale(250),
   },
   campoTexto: {
     backgroundColor: "#ffffff",
     color: "#000000",
     textAlign: "center",
     borderRadius: 20,
-    width: width * 0.8,
-    height: height * 0.06,
-    marginVertical: height * 0.015,
+    width: scale(300),
+    height: verticalScale(40),
+    marginVertical: verticalScale(10),
   },
   botaopress: {
     borderRadius: 20,
     backgroundColor: "rgba(15, 109, 0, 0.9)",
-    width: width * 0.9,
-    height: height * 0.06,
+    width: scale(300),
+    height: verticalScale(40),
     alignItems: "center",
     justifyContent: "center",
-    marginVertical: height * 0.015,
     alignSelf: "center",
-    bottom: height * -0.15,
+    top: verticalScale(575),
+    position: "absolute",
+  },
+  botaopress2: {
+    borderRadius: 20,
+    backgroundColor: "rgba(15, 109, 0, 0.9)",
+    width: scale(300),
+    height: verticalScale(40),
+    alignItems: "center",
+    justifyContent: "center",
+    alignSelf: "center",
+    top: verticalScale(625),
+    position: "absolute",
   },
   tituloBotao: {
-    fontSize: height * 0.02,
+    fontSize: verticalScale(14),
     fontWeight: "bold",
     color: "#fff",
   },

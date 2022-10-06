@@ -8,6 +8,7 @@ import {
   View,
   Dimensions,
 } from "react-native";
+import { scale, verticalScale } from "react-native-size-matters";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { FlatList } from "react-native-gesture-handler";
 
@@ -24,7 +25,7 @@ const Touchable = (
         <Text style={styles.touchableText}>
           {selected === null ? text : selected?.[objValue]}
         </Text>
-        <MaterialCommunityIcons name="chevron-right" color="white" size={26} />
+        <MaterialCommunityIcons name="chevron-right" color="white" size={verticalScale(30)} />
       </TouchableOpacity>
     );
   };
@@ -56,7 +57,7 @@ const Option = (item, value, selected, objKey, onPress) => {
           {item?.[value]}
         </Text>
         {selected?.[objKey] === item?.[objKey] ? (
-          <MaterialCommunityIcons name="check" size={18} color="white" />
+          <MaterialCommunityIcons name="check" size={verticalScale(30)} color="white" />
         ) : null}
       </TouchableOpacity>
     );
@@ -111,7 +112,7 @@ const Select = ({
             <TouchableOpacity onPress={() => setVisible(false)}>
               <MaterialCommunityIcons
                 name="close"
-                size={width * 0.08}
+                size={verticalScale(30)}
                 color="white"
               />
             </TouchableOpacity>
@@ -135,48 +136,48 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    height: height * 0.08,
+    height: verticalScale(40),
     borderBottomColor: "white",
-    borderBottomWidth: width * 0.004,
-    width: width * 0.8,
+    borderBottomWidth: verticalScale(1),
+    width: scale(300),
   },
   touchableText: {
     color: "white",
-    fontSize: width * 0.05,
+    fontSize: verticalScale(16),
     fontWeight: "bold",
   },
   header: {
-    height: height * 0.1,
+    height: verticalScale(50),
     backgroundColor: "#004513",
     borderBottomColor: "#00290C",
-    borderBottomWidth: width * 0.004,
+    borderBottomWidth: verticalScale(1),
     flexDirection: "row-reverse",
     alignItems: "center",
-    paddingVertical: height * 0.012,
-    paddingHorizontal: width * 0.048,
+    paddingVertical: verticalScale(10),
+    paddingHorizontal: scale(10),
   },
   titleContainer: {
     flex: 1,
   },
   title: {
-    fontSize: width * 0.08,
+    fontSize: verticalScale(25),
     fontWeight: "bold",
     color: "white",
-    textAlign: "center",
+    paddingLeft: scale(20),
   },
   optionContainer: {
     backgroundColor: "#0F6D00",
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    paddingVertical: height * 0.012,
-    paddingHorizontal: width * 0.048,
+    paddingVertical: verticalScale(15),
+    paddingHorizontal: scale(20),
     borderBottomColor: "#00290C",
-    borderBottomWidth: width * 0.004,
+    borderBottomWidth: verticalScale(1),
   },
   optionText: {
     color: "white",
-    fontSize: width * 0.055,
+    fontSize: verticalScale(20),
   },
 });
 export default Select;

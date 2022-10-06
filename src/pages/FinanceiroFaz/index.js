@@ -13,8 +13,7 @@ import { useNavigation } from "@react-navigation/native";
 import { TabView, SceneMap, TabBar } from "react-native-tab-view";
 import Header from "../../components/Header";
 import PieChartFaz from "../../components/Graficos/PieChart";
-
-const { height, width } = Dimensions.get("window");
+import { scale, verticalScale } from "react-native-size-matters";
 const FirstRoute = () => <Relatorio />;
 
 const SecondRoute = () => (
@@ -107,7 +106,8 @@ function Relatorio() {
         <Text style={styles.texto}>Balanço final:</Text>
         <Text style={styles.textoValorPos}>R$ 2500,00</Text>
         <View style={styles.containerChart}>
-          <PieChartFaz /></View>
+          <PieChartFaz />
+        </View>
         <TouchableOpacity
           style={styles.botaopress}
           onPress={() => navigation.navigate("GeralFaz")}
@@ -127,53 +127,46 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   containerChart: {
-    alignSelf: "center",
-    width: width*0.7,
-    height: width*0.5,
-    justifyContent: "center",
-    paddingTop: height*0.07,
-
+    position:"absolute",
+    top: verticalScale(250),
   },
   botaopress: {
     borderRadius: 20,
     backgroundColor: "rgba(15, 109, 0, 0.9)",
-    width: width * 0.9,
-    height: height * 0.06,
+    width: scale(300),
+    height: verticalScale(40),
     alignItems: "center",
     justifyContent: "center",
-    marginVertical: height * 0.015,
     alignSelf: "center",
-    bottom: height * -0.1,
+    top: verticalScale(530),
+    position: "absolute",
   },
   tituloBotao: {
-    fontSize: height * 0.02,
+    fontSize: verticalScale(14),
     fontWeight: "bold",
     color: "#fff",
   },
   imgbg: {
     flex: 1,
     objectFit: "cover",
-    padding: height * 0.04,
+    padding: verticalScale(10),
   },
   textoValorNeg: {
     color: "#FF3131",
     fontWeight: "bold",
-    fontSize: height * 0.05,
-    marginLeft: width * 0.02,
+    fontSize: verticalScale(30),
+    marginLeft: scale(20),
   },
   texto: {
     color: "#ffffff",
     fontWeight: "bold",
-    fontSize: height * 0.027,
-    marginLeft: width * 0.02,
+    fontSize: verticalScale(25),
+    marginLeft: scale(20),
   },
   textoValorPos: {
     color: "#0FFF50",
     fontWeight: "bold",
-    fontSize: height * 0.05,
-    marginLeft: width * 0.02,
-  },
-  containergraf: {
-    width: width * 0.05,
+    fontSize: verticalScale(30),
+    marginLeft: scale(20),
   },
 });

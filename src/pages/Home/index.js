@@ -1,8 +1,8 @@
 import React from "react";
 import { fazendas } from "../../components/Select/data";
 import Select from "../../components/Select";
+import { scale, verticalScale } from "react-native-size-matters";
 import {
-  Dimensions,
   View,
   SafeAreaView,
   Text,
@@ -11,8 +11,6 @@ import {
   TouchableOpacity,
   StyleSheet,
 } from "react-native";
-
-const { height, width } = Dimensions.get("window");
 function Home({ navigation }) {
   const imgbg1 = "../../../assets/background7.jpg";
   return (
@@ -27,8 +25,9 @@ function Home({ navigation }) {
           source={require("../../../assets/FazFin.png")}
         />
         <Text style={styles.title}>Bem-vindo(a)</Text>
-        <View style={styles.viewtext}>
+        <View style={styles.select}>
           <Text style={styles.texto}>Sua fazenda:</Text>
+
           <Select
             touchableText="Selecione sua fazenda"
             title="Fazendas"
@@ -44,7 +43,7 @@ function Home({ navigation }) {
           <Text style={styles.tituloBotao}>{"Cadastrar fazenda"}</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          style={styles.botaopress}
+          style={styles.botaopress2}
           onPress={() => navigation.navigate("GeralFaz")}
         >
           <Text style={styles.tituloBotao}>{"Continuar"}</Text>
@@ -65,42 +64,57 @@ const styles = StyleSheet.create({
   },
   logo: {
     resizeMode: "contain",
-    height: height * 0.15,
-    width: width * 0.3,
-    marginVertical: height * 0.04,
+    height: verticalScale(90),
+    width: verticalScale(90),
+    position: "absolute",
+    top: verticalScale(75),
     alignSelf: "center",
   },
   title: {
-    fontSize: height * 0.045,
+    fontSize: verticalScale(30),
     textAlign: "center",
     color: "#fff",
     fontWeight: "bold",
     alignSelf: "center",
+    position: "absolute",
+    top: verticalScale(175),
   },
   texto: {
-    fontSize: height * 0.03,
+    fontSize: verticalScale(20),
     color: "#ffffff",
-    textAlign: "center",
-  },
-  viewtext: {
     alignSelf: "center",
-    marginVertical: height * 0.05,
   },
   botaopress: {
     borderRadius: 20,
     backgroundColor: "rgba(15, 109, 0, 0.9)",
-    width: width * 0.9,
-    height: height * 0.06,
+    width: scale(300),
+    height: verticalScale(40),
     alignItems: "center",
     justifyContent: "center",
-    marginVertical: height * 0.015,
     alignSelf: "center",
-    bottom: height * -0.295,
+    top: verticalScale(575),
+    position: "absolute",
+  },
+  botaopress2: {
+    borderRadius: 20,
+    backgroundColor: "rgba(15, 109, 0, 0.9)",
+    width: scale(300),
+    height: verticalScale(40),
+    alignItems: "center",
+    justifyContent: "center",
+    alignSelf: "center",
+    top: verticalScale(625),
+    position: "absolute",
   },
   tituloBotao: {
-    fontSize: height * 0.02,
+    fontSize: verticalScale(14),
     fontWeight: "bold",
     color: "#fff",
+  },
+  select: {
+    position: "absolute",
+    top: verticalScale(300),
+    alignSelf: "center",
   },
 });
 
