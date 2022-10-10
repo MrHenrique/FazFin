@@ -11,6 +11,7 @@ import { FlatList } from "react-native-gesture-handler";
 import { dataVacas } from "./vacas";
 import Pressable from "react-native/Libraries/Components/Pressable/Pressable";
 import Modal from "react-native-modal";
+import { scale, verticalScale } from "react-native-size-matters";
 
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
@@ -120,6 +121,7 @@ const styles = StyleSheet.create({
     paddingTop: "5%",
     paddingBottom: "1%",
     width: windowWidth,
+    paddingBottom: verticalScale(80),
   },
   containermodal: {
     backgroundColor: "white",
