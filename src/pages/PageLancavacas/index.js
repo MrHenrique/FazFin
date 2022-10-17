@@ -11,7 +11,7 @@ import {
 } from "react-native";
 import Header from "../../components/Header";
 import { scale, verticalScale } from "react-native-size-matters";
-const ImgLeite = "../../../assets/milk-bottle.png";
+const ImgLeite = "../../../assets/milk-bottle.png"; 
 const ImgAliment = "../../../assets/cow.png";
 const ImgManejo = "../../../assets/smart-farm.png";
 function PageLancavacas({ navigation }) {
