@@ -26,7 +26,8 @@ function PageLancavacas({ navigation }) {
         <Header title="Lançar Contas" />
 
         <View style={styles.areabotao}>
-          <TouchableOpacity style={styles.botaos}>
+          <TouchableOpacity style={styles.botaos}
+           onPress={() => navigation.navigate("Leite")}>
             <Text style={styles.Texto}>
               <Image style={styles.imagem} source={require(ImgLeite)} />
               Leite

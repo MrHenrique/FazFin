@@ -5,6 +5,7 @@ import CadastroFaz from "../pages/CadastroFaz";
 import GeralFaz from "../pages/GeralFaz";
 import CadastroReb from "../pages/CadastroReb";
 import Manejo from "../pages/Manejo";
+import Leite from "../pages/Leite";
 import GeralReb from "../pages/GeralReb";
 import PageLancavacas from "../pages/PageLancavacas";
 import PageListavacas from "../pages/PageListavacas";
@@ -39,6 +40,13 @@ function StackRoutes() {
       <Stack.Screen
         name="CadastroReb"
         component={CadastroReb}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="Leite"
+        component={Leite}
         options={{
           headerShown: false,
         }}
