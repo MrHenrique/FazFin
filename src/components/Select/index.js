@@ -103,7 +103,7 @@ const Select = ({
   return (
     <>
       <TouchableComponent />
-      <Modal visible={visible} animationType="fade">
+      <Modal visible={visible} animationType="fade" >
         <SafeAreaView style={{ flex: 1 }}>
           <View style={styles.header}>
             <View style={styles.titleContainer}>

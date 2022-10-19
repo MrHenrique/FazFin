@@ -7,32 +7,34 @@ function PieChartFaz() {
     {
       name: "Faturamento",
       valor: 5000,
-      color: "rgba(15, 109, 0, 1)",
+      color: "rgba(15, 109, 0, 0.85)",
       legendFontColor: "#FFF",
       legendFontSize: scale(13),
     },
     {
       name: "Despesas",
       valor: 2500,
-      color: "red",
+      color: "rgba(255,0,0,0.85)",
       legendFontColor: "#FFF",
       legendFontSize: scale(13),
     },
   ];
   const chartConfig = {
     color: (opacity = 1) => `rgba(26, 255, 146, ${opacity})`,
+    backgroundGradientFromOpacity: 0,
+    backgroundGradientToOpacity: 0,
   };
   return (
     <PieChart
-    data={data}
-    width={screenWidth}
-    height={verticalScale(220)}
-    chartConfig={chartConfig}
-    accessor={"valor"}
-    backgroundColor={"transparent"}
-    paddingLeft={scale(0)}
-    center={[scale(10),verticalScale(10)]}
-    absolute
+      data={data}
+      width={screenWidth}
+      height={verticalScale(220)}
+      chartConfig={chartConfig}
+      accessor={"valor"}
+      backgroundColor={"transparent"}
+      paddingLeft={scale(0)}
+      center={[scale(10), verticalScale(10)]}
+      absolute
     />
   );
 }
