@@ -1,27 +1,15 @@
 import * as React from "react";
-import {
-  View,
-  StyleSheet,
-  useWindowDimensions,
-} from "react-native";
+import { View, StyleSheet, useWindowDimensions } from "react-native";
 import { TabView, SceneMap, TabBar } from "react-native-tab-view";
-import Relatorio from "./Relatorio"
+import Relatorio from "./Relatorio";
 import Header from "../../components/Header";
 import Despesas from "./Despesas";
-const FirstRoute = () => (<Relatorio />);
+import Faturamento from "./Faturamento";
+const FirstRoute = () => <Relatorio />;
 
-const SecondRoute = () => (
- <Despesas/>
-);
+const SecondRoute = () => <Despesas />;
 
-const ThirdRoute = () => (
-  <View
-    style={{
-      flex: 1,
-      backgroundColor: "#673ab7",
-    }}
-  />
-);
+const ThirdRoute = () => <Faturamento />;
 const renderScene = SceneMap({
   first: FirstRoute,
   second: SecondRoute,
@@ -43,7 +31,7 @@ export default function FinanceiroFaz({ navigation }) {
     },
     {
       key: "third",
-      title: "Produção",
+      title: "Faturamento",
     },
   ]);
   const renderTabBar = (props) => (

@@ -10,22 +10,22 @@ import {
   ScrollView,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import PieChartFaz from "../../../components/Graficos/PieChart";
+import BezierChartFaturamento from "../../../components/Graficos/BezierChartFaturamento";
 import { scale, verticalScale } from "react-native-size-matters";
 import Modal from "react-native-modal";
-function Relatorio() {
+function Faturamento() {
   const [isModalVisible, setModalVisible] = useState(false);
   function toggleModal() {
     setModalVisible(!isModalVisible);
   }
-  const imgbg1 = "../../../../assets/bg5.jpg";
+  const imgbg1 = "../../../../assets/bg2.jpg";
   const navigation = useNavigation();
   return (
     <SafeAreaView style={styles.container}>
       <ImageBackground
         style={styles.imgbg}
         source={require(imgbg1)}
-        imageStyle={{ opacity: 0.6 }}
+        imageStyle={{ opacity: 0.3 }}
       >
         <TouchableOpacity
           onPress={() => {
@@ -35,14 +35,8 @@ function Relatorio() {
           <Text style={styles.texto}>Total de Faturamento:</Text>
           <Text style={styles.textoValorPos}>R$ 5000,00</Text>
           <View style={styles.lineStyle} />
-          <Text style={styles.texto}>Total de despesas:</Text>
-          <Text style={styles.textoValorNeg}>R$ 2500,00</Text>
-          <View style={styles.lineStyle} />
-          <Text style={styles.texto}>Balanço final:</Text>
-          <Text style={styles.textoValorPos}>R$ 2500,00</Text>
-          <View style={styles.lineStyle} />
           <View style={styles.containerChart}>
-            <PieChartFaz />
+            <BezierChartFaturamento />
           </View>
 
           <Modal
@@ -105,57 +99,29 @@ function Relatorio() {
                     {"Produção Leite 165l 11/10 - R$ 555,00"}
                   </Text>
                 </TouchableOpacity>
-              </ScrollView>
-              <Text style={styles.tituloModal}>Detalhes de Despesas:</Text>
-              <ScrollView style={styles.modalScroll}>
                 <TouchableOpacity style={styles.listaDet}>
                   <Text style={styles.tituloBotao}>
-                    {"Ração Vialac 10 kg 19/10 - R$ 25,00"}
+                    {"Produção Leite 165l 10/10 - R$ 555,00"}
                   </Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.listaDet2}>
                   <Text style={styles.tituloBotao}>
-                    {"Ração Vialac 10 kg 18/10 - R$ 25,00"}
+                    {"Produção Leite 165l 09/10 - R$ 555,00"}
                   </Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.listaDet}>
                   <Text style={styles.tituloBotao}>
-                    {"Visita Veterinário 18/10 - R$ 2306,90"}
+                    {"Produção Leite 165l 08/10 - R$ 555,00"}
                   </Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.listaDet2}>
                   <Text style={styles.tituloBotao}>
-                    {"Ração Vialac 10 kg 17/10 - R$ 25,00"}
+                    {"Produção Leite 165l 07/10 - R$ 555,00"}
                   </Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.listaDet}>
                   <Text style={styles.tituloBotao}>
-                    {"Ração Vialac 10 kg 16/10 - R$ 25,00"}
-                  </Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.listaDet2}>
-                  <Text style={styles.tituloBotao}>
-                    {"Prata Aerocid 16/10 - R$ 22,00"}
-                  </Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.listaDet}>
-                  <Text style={styles.tituloBotao}>
-                    {"Ração Vialac 10 kg 15/10 - R$ 25,00"}
-                  </Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.listaDet2}>
-                  <Text style={styles.tituloBotao}>
-                    {"Ração Vialac 10 kg 14/10 - R$ 25,00"}
-                  </Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.listaDet}>
-                  <Text style={styles.tituloBotao}>
-                    {"Ração Vialac 10 kg 13/10 - R$ 25,00"}
-                  </Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.listaDet2}>
-                  <Text style={styles.tituloBotao}>
-                    {"Ciprolac Anti Mastite 13/10 - R$ 21,10"}
+                    {"Produção Leite 165l 06/10 - R$ 555,00"}
                   </Text>
                 </TouchableOpacity>
               </ScrollView>
@@ -190,16 +156,23 @@ const styles = StyleSheet.create({
     borderRadius: 20,
   },
   modalScroll: {
-    height: verticalScale(220),
+    height: verticalScale(500),
     marginVertical: verticalScale(10),
   },
   container: {
     backgroundColor: "#006773",
     flex: 1,
   },
+  lineStyle: {
+    backgroundColor: "#FFF",
+    padding: verticalScale(0.4),
+    width: scale(310),
+    alignSelf: "center",
+    margin: verticalScale(6),
+  },
   containerChart: {
     position: "absolute",
-    top: verticalScale(250),
+    top: verticalScale(150),
   },
   botaopress: {
     borderRadius: 20,
@@ -216,13 +189,6 @@ const styles = StyleSheet.create({
     fontSize: verticalScale(14),
     fontWeight: "bold",
     color: "#fff",
-  },
-  lineStyle: {
-    backgroundColor: "#FFF",
-    padding: verticalScale(0.4),
-    width: scale(310),
-    alignSelf: "center",
-    margin: verticalScale(6),
   },
   tituloModal: {
     fontSize: verticalScale(20),
@@ -286,4 +252,4 @@ const styles = StyleSheet.create({
     marginVertical: verticalScale(5),
   },
 });
-export default Relatorio;
+export default Faturamento;

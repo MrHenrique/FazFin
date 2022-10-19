@@ -10,7 +10,7 @@ import {
   ScrollView,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import BezierChartFaz from "../../../components/Graficos/BezierChart";
+import BezierChartDespesas from "../../../components/Graficos/BezierChartDespesas";
 import { scale, verticalScale } from "react-native-size-matters";
 import Modal from "react-native-modal";
 function Despesas() {
@@ -36,13 +36,13 @@ function Despesas() {
           <Text style={styles.textoValorNeg}>R$ 2500,00</Text>
           <View style={styles.lineStyle} />
           <View style={styles.containerChart}>
-            <BezierChartFaz />
+            <BezierChartDespesas />
           </View>
 
           <Modal
             isVisible={isModalVisible}
             coverScreen={true}
-            backdropColor={"rgba(0,69,19,0.8)"}
+            backdropColor={"rgba(234,242,215,0.8)"}
             animationIn="slideInUp"
             animationOut="slideOutDown"
           >
@@ -54,7 +54,7 @@ function Despesas() {
                     {"Ração Vialac 10 kg 19/10 - R$ 25,00"}
                   </Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.listaDet}>
+                <TouchableOpacity style={styles.listaDet2}>
                   <Text style={styles.tituloBotao}>
                     {"Ração Vialac 10 kg 18/10 - R$ 25,00"}
                   </Text>
@@ -64,7 +64,7 @@ function Despesas() {
                     {"Visita Veterinário 18/10 - R$ 2306,90"}
                   </Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.listaDet}>
+                <TouchableOpacity style={styles.listaDet2}>
                   <Text style={styles.tituloBotao}>
                     {"Ração Vialac 10 kg 17/10 - R$ 25,00"}
                   </Text>
@@ -74,7 +74,7 @@ function Despesas() {
                     {"Ração Vialac 10 kg 16/10 - R$ 25,00"}
                   </Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.listaDet}>
+                <TouchableOpacity style={styles.listaDet2}>
                   <Text style={styles.tituloBotao}>
                     {"Prata Aerocid 16/10 - R$ 22,00"}
                   </Text>
@@ -84,7 +84,7 @@ function Despesas() {
                     {"Ração Vialac 10 kg 15/10 - R$ 25,00"}
                   </Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.listaDet}>
+                <TouchableOpacity style={styles.listaDet2}>
                   <Text style={styles.tituloBotao}>
                     {"Ração Vialac 10 kg 14/10 - R$ 25,00"}
                   </Text>
@@ -94,7 +94,7 @@ function Despesas() {
                     {"Ração Vialac 10 kg 13/10 - R$ 25,00"}
                   </Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.listaDet}>
+                <TouchableOpacity style={styles.listaDet2}>
                   <Text style={styles.tituloBotao}>
                     {"Ciprolac Anti Mastite 12/10 - R$ 21,10"}
                   </Text>
@@ -104,7 +104,7 @@ function Despesas() {
                     {"Ração Vialac 10 kg 11/10 - R$ 25,00"}
                   </Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.listaDet}>
+                <TouchableOpacity style={styles.listaDet2}>
                   <Text style={styles.tituloBotao}>
                     {"Ração Vialac 10 kg 10/10 - R$ 25,00"}
                   </Text>
@@ -114,7 +114,7 @@ function Despesas() {
                     {"Ração Vialac 10 kg 09/10 - R$ 25,00"}
                   </Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.listaDet}>
+                <TouchableOpacity style={styles.listaDet2}>
                   <Text style={styles.tituloBotao}>
                     {"Ração Vialac 10 kg 08/10 - R$ 25,00"}
                   </Text>
@@ -142,13 +142,14 @@ function Despesas() {
   );
 }
 const styles = StyleSheet.create({
-  modalContainer: {
-    backgroundColor: "rgba(0,69,19,0.7)",
-    position: "absolute",
-    top: verticalScale(0),
-    alignSelf: "center",
-    width: scale(330),
-  },
+    modalContainer: {
+        backgroundColor: "rgba(234,242,215,1)",
+        position: "absolute",
+        top: verticalScale(0),
+        alignSelf: "center",
+        width: scale(330),
+        borderRadius: 20,
+      },
   modalScroll: {
     height: verticalScale(500),
     marginVertical: verticalScale(10),
@@ -187,8 +188,9 @@ const styles = StyleSheet.create({
   tituloModal: {
     fontSize: verticalScale(20),
     fontWeight: "bold",
-    color: "#fff",
+    color: "rgba(0, 69, 19, 0.95)",
     margin: verticalScale(5),
+    alignSelf: "center",
   },
   imgbg: {
     flex: 1,
@@ -227,6 +229,16 @@ const styles = StyleSheet.create({
   listaDet: {
     borderRadius: 20,
     backgroundColor: "rgba(15, 109, 0, 0.95)",
+    width: scale(300),
+    height: verticalScale(40),
+    alignItems: "center",
+    justifyContent: "center",
+    alignSelf: "center",
+    marginVertical: verticalScale(5),
+  },
+  listaDet2: {
+    borderRadius: 20,
+    backgroundColor: "rgba(0, 69, 19, 0.95)",
     width: scale(300),
     height: verticalScale(40),
     alignItems: "center",
