@@ -17,7 +17,7 @@ const windowHeight = Dimensions.get("window").height;
 const ScreenWidth = Dimensions.get("screen").width;
 const ScreenHeight = Dimensions.get("screen").height;
 
-function Manejo({ navigation }) {
+function Leite({ navigation }) {
   const imgbg1 = "../../../assets/bg10.jpg";
   return (
     <SafeAreaView style={styles.container}>
@@ -130,4 +130,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default Manejo;
+export default Leite;
