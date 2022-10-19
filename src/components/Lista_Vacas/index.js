@@ -57,6 +57,7 @@ function Lista_vacas() {
             toggleModal();
           }}
           Style={{ margin: 0 }}
+          statusBarTranslucent
         ><ScrollView>
             <View style={{ paddingBottom: verticalScale(70), }}>
               <View style={styles.containermodal}>
@@ -217,7 +218,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     borderRadius: 18,
     position: "absolute",
-    top: ScreenHeight >= 800 ? verticalScale(609) : verticalScale(580),
+    top: ScreenHeight >= 800 ? verticalScale(633) : verticalScale(605),
     left: scale(8),
   },
   textovoltar: {
