@@ -23,7 +23,7 @@ function PageLancavacas({ navigation }) {
         source={require(imgbg1)}
         imageStyle={{ opacity: 0.6 }}
       >
-        <Header title="Lançar Contas" />
+        <Header title="Produção e despesas" />
 
         <View style={styles.areabotao}>
           <TouchableOpacity style={styles.botaos}

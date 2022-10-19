@@ -5,6 +5,7 @@ import {
   Ionicons,
   MaterialCommunityIcons,
   MaterialIcons,
+  Entypo,Fontisto
 } from "@expo/vector-icons";
 import CadastroFaz from "../pages/CadastroFaz";
 import StackRoutes from "../Routes/stackRoutes";
@@ -15,6 +16,7 @@ import CadastroReb from "../pages/CadastroReb";
 import Manejo from "../pages/Manejo";
 import Leite from "../pages/Leite";
 import GeralReb from "../pages/GeralReb";
+import FinanceiroFaz from "../pages/FinanceiroFaz";
 const Drawer = createDrawerNavigator();
 function Routes() {
   return (
@@ -52,36 +54,8 @@ function Routes() {
         options={{
           title: "Cadastro de fazendas",
           drawerIcon: ({ focused, size, color }) => (
-            <Ionicons
-              name={focused ? "person-add" : "person-add-outline"}
-              size={size}
-              color={color}
-            />
-          ),
-        }}
-      />
-      <Drawer.Screen
-        name="Vacas"
-        component={PageListavacas}
-        options={{
-          title: "Lista de Vacas",
-          drawerIcon: ({ focused, size, color }) => (
-            <MaterialCommunityIcons
-              name={focused ? "account-cowboy-hat" : "account-cowboy-hat"}
-              size={size}
-              color={color}
-            />
-          ),
-        }}
-      />
-      <Drawer.Screen
-        name="Contas"
-        component={PageLancavacas}
-        options={{
-          title: "Lancar contas",
-          drawerIcon: ({ focused, size, color }) => (
-            <MaterialIcons
-              name={focused ? "attach-money" : "attach-money"}
+            <Entypo
+              name={focused ? "address" : "address"}
               size={size}
               color={color}
             />
@@ -117,27 +91,15 @@ function Routes() {
         }}
       />
       <Drawer.Screen
-        name="Manejo"
-        component={Manejo}
+        name="FinanceiroFaz"
+        component={FinanceiroFaz}
         options={{
-          title: "Manejo",
+          title: "Financeiro fazenda",
           drawerIcon: ({ focused, size, color }) => (
             <MaterialCommunityIcons
-              name={focused ? "cow-off" : "cow"}
-              size={size}
-              color={color}
-            />
-          ),
-        }}
-      />
-      <Drawer.Screen
-        name="Leite"
-        component={Leite}
-        options={{
-          title: "Leite",
-          drawerIcon: ({ focused, size, color }) => (
-            <MaterialCommunityIcons
-              name={focused ? "cow-off" : "cow"}
+              name={
+                focused ? "calculator-variant-outline" : "calculator-variant"
+              }
               size={size}
               color={color}
             />
@@ -150,10 +112,65 @@ function Routes() {
         options={{
           title: "Visão geral de rebanho",
           drawerIcon: ({ focused, size, color }) => (
-            <MaterialCommunityIcons
-              name={
-                focused ? "calculator-variant-outline" : "calculator-variant"
-              }
+            <Entypo
+              name={focused ? "line-graph" : "line-graph"}
+              size={size}
+              color={color}
+            />
+          ),
+        }}
+      />
+      <Drawer.Screen
+        name="Vacas"
+        component={PageListavacas}
+        options={{
+          title: "Lista de Vacas",
+          drawerIcon: ({ focused, size, color }) => (
+            <Ionicons
+              name={focused ? "list-circle" : "list-circle-outline"}
+              size={size}
+              color={color}
+            />
+          ),
+        }}
+      />
+      <Drawer.Screen
+        name="Contas"
+        component={PageLancavacas}
+        options={{
+          title: "Produção e despesas",
+          drawerIcon: ({ focused, size, color }) => (
+            <MaterialIcons
+              name={focused ? "attach-money" : "attach-money"}
+              size={size}
+              color={color}
+            />
+          ),
+        }}
+      />
+
+      <Drawer.Screen
+        name="Leite"
+        component={Leite}
+        options={{
+          title: "Leite",
+          drawerIcon: ({ focused, size, color }) => (
+            <Entypo
+              name={focused ? "bucket" : "bucket"}
+              size={size}
+              color={color}
+            />
+          ),
+        }}
+      />
+      <Drawer.Screen
+        name="Manejo"
+        component={Manejo}
+        options={{
+          title: "Manejo",
+          drawerIcon: ({ focused, size, color }) => (
+            <Fontisto
+              name={focused ? "injection-syringe" : "injection-syringe"}
               size={size}
               color={color}
             />
