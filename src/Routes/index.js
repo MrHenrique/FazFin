@@ -13,6 +13,7 @@ import PageLancavacas from "../pages/PageLancavacas";
 import GeralFaz from "../pages/GeralFaz";
 import CadastroReb from "../pages/CadastroReb";
 import Manejo from "../pages/Manejo";
+import Leite from "../pages/Leite";
 import GeralReb from "../pages/GeralReb";
 const Drawer = createDrawerNavigator();
 function Routes() {
@@ -120,6 +121,20 @@ function Routes() {
         component={Manejo}
         options={{
           title: "Manejo",
+          drawerIcon: ({ focused, size, color }) => (
+            <MaterialCommunityIcons
+              name={focused ? "cow-off" : "cow"}
+              size={size}
+              color={color}
+            />
+          ),
+        }}
+      />
+      <Drawer.Screen
+        name="Leite"
+        component={Leite}
+        options={{
+          title: "Leite",
           drawerIcon: ({ focused, size, color }) => (
             <MaterialCommunityIcons
               name={focused ? "cow-off" : "cow"}
