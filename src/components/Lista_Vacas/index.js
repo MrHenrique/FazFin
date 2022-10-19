@@ -203,12 +203,12 @@ const styles = StyleSheet.create({
     fontSize: scale(20),
     color: "white",
   },
-  containerinfos: {
-    marginTop: verticalScale(10),
-    padding: scale(10),
-    backgroundColor: "rgba(15, 109, 0, 0.7)",
-    borderRadius: scale(8),
-  },
+    containerinfos: {
+      marginTop: verticalScale(10),
+      padding: scale(10),
+      backgroundColor: "rgba(15, 109, 0, 0.7)",
+      borderRadius: scale(8),
+    },
 
   botaovoltar: {
     backgroundColor: "rgba(15, 109, 0, 0.9)",
