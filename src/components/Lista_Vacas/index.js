@@ -57,6 +57,7 @@ function Lista_vacas() {
             toggleModal();
           }}
           Style={{ margin: 0 }}
+          statusBarTranslucent
         ><ScrollView>
             <View style={{ paddingBottom: verticalScale(70), }}>
               <View style={styles.containermodal}>
@@ -202,12 +203,12 @@ const styles = StyleSheet.create({
     fontSize: scale(20),
     color: "white",
   },
-  containerinfos: {
-    marginTop: verticalScale(10),
-    padding: scale(10),
-    backgroundColor: "rgba(15, 109, 0, 0.7)",
-    borderRadius: scale(8),
-  },
+    containerinfos: {
+      marginTop: verticalScale(10),
+      padding: scale(10),
+      backgroundColor: "rgba(15, 109, 0, 0.7)",
+      borderRadius: scale(8),
+    },
 
   botaovoltar: {
     backgroundColor: "rgba(15, 109, 0, 0.9)",
@@ -217,7 +218,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     borderRadius: 18,
     position: "absolute",
-    top: ScreenHeight >= 800 ? verticalScale(609) : verticalScale(580),
+    top: ScreenHeight >= 800 ? verticalScale(633) : verticalScale(605),
     left: scale(8),
   },
   textovoltar: {
