@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
         flex: 1,
         objectFit: "cover",
         width: "100%",
-      },
+    },
     container: {
         flex: 1,
         alignItems: 'center',
@@ -47,11 +47,11 @@ const styles = StyleSheet.create({
     },
     contvoltar: {
         position: 'absolute',
-        top: verticalScale(625),
         alignItems: "center",
         justifyContent: "center",
         alignSelf: "center",
         color: "rgba(15, 109, 0, 0.9)",
+        top: verticalScale(625),
 
 
     },
