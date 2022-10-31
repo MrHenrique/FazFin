@@ -8,62 +8,30 @@ import {
   SafeAreaView,
 } from "react-native";
 import Header from "../../components/Header";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
-import { FontAwesome5 } from "@expo/vector-icons";
 import { scale, verticalScale } from "react-native-size-matters";
+import Modal from '../modalVacina/index'
 const { height, width } = Dimensions.get("window");
 function Manejo({ navigation }) {
   const imgbg1 = "../../../assets/bg10.jpg";
   return (
     <SafeAreaView style={styles.container}>
-      <ImageBackground
-        style={styles.imgbg}
-        source={require(imgbg1)}
-        imageStyle={{ opacity: 0.6 }}
-      >
-        <Header title="Olá, Carlos" />
-        <TouchableOpacity
-          style={styles.botaoPress2}
-          onPress={() => navigation.navigate("VacinaRem")}
+      
+        <ImageBackground
+          style={styles.imgbg}
+          source={require(imgbg1)}
+          imageStyle={{ opacity: 0.6 }}
         >
-          <Text style={styles.tituloBotao2}>
-            <MaterialCommunityIcons
-              name="hospital-box-outline"
-              size={scale(30)}
-              color="white"
-            />
-            {"Vacina e Remedios"}
-          </Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.botaoPress3}
-          onPress={() => navigation.navigate("MaodeObra")}
-        >
-          <Text style={styles.tituloBotao2}>
-            <MaterialCommunityIcons
-              name="hammer-screwdriver"
-              size={scale(30)}
-              color="white"
-            />
-            {"Mão de obra"}
-          </Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.botaoPress4}
-          onPress={() => navigation.navigate("VacinaRem")}
-        >
-          <Text style={styles.tituloBotao2}>
-            <FontAwesome5 name="tractor" size={scale(30)} color="white" />
-            {"Outros"}
-          </Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.botaopress}
-          onPress={() => navigation.navigate("PageLancavacas")}
-        >
-          <Text style={styles.tituloBotao}>{"Voltar"}</Text>
-        </TouchableOpacity>
-      </ImageBackground>
+          
+          <Header title="Olá, Carlos" />
+          <Modal/> 
+          <Modal/>
+          <TouchableOpacity
+            style={styles.botaopress}
+            onPress={() => navigation.navigate("PageLancavacas")}
+          >
+            <Text style={styles.tituloBotao}>{"Voltar"}</Text>
+          </TouchableOpacity>
+        </ImageBackground>
     </SafeAreaView>
   );
 }
