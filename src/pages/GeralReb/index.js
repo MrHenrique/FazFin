@@ -52,7 +52,7 @@ function GeralReb({ navigation }) {
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.botaoPress4}
-          onPress={() => navigation.navigate("PageLancavacas")}
+          onPress={() => navigation.navigate("PagelancaContas")}
         >
           <Text style={styles.tituloBotao2}>
             <MaterialCommunityIcons

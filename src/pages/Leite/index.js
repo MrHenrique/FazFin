@@ -53,7 +53,7 @@ function Leite({ navigation }) {
       </ScrollView>
       <TouchableOpacity
         style={styles.botaovoltar}
-        onPress={() => navigation.navigate("PageLancavacas")}
+        onPress={() => navigation.navigate("PagelancaContas")}
       >
         <Text style={styles.textovoltar}>Voltar</Text>
       </TouchableOpacity>

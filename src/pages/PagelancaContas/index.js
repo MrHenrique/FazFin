@@ -34,7 +34,8 @@ function PageLancavacas({ navigation }) {
             </Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.botaos2}>
+          <TouchableOpacity style={styles.botaos2}
+          onPress={() => navigation.navigate("Alimentacao")}>
             <Text style={styles.Texto}>
               <Image style={styles.imagem} source={require(ImgAliment)} />
               Alimentação

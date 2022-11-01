@@ -10,13 +10,14 @@ import {
 import CadastroFaz from "../pages/CadastroFaz";
 import StackRoutes from "../Routes/stackRoutes";
 import PageListavacas from "../pages/PageListavacas";
-import PageLancavacas from "../pages/PageLancavacas";
+import PagelancaContas from "../pages/PagelancaContas";
 import GeralFaz from "../pages/GeralFaz";
 import CadastroReb from "../pages/CadastroReb";
 import Manejo from "../pages/Manejo";
 import Leite from "../pages/Leite";
 import GeralReb from "../pages/GeralReb";
 import FinanceiroFaz from "../pages/FinanceiroFaz";
+import Alimentacao from "../pages/Alimentacao";
 const Drawer = createDrawerNavigator();
 function Routes() {
   return (
@@ -51,6 +52,20 @@ function Routes() {
       <Drawer.Screen
         name="CadastroFaz"
         component={CadastroFaz}
+        options={{
+          title: "Cadastro de fazendas",
+          drawerIcon: ({ focused, size, color }) => (
+            <Entypo
+              name={focused ? "address" : "address"}
+              size={size}
+              color={color}
+            />
+          ),
+        }}
+      />
+      <Drawer.Screen
+        name="Alimentacao"
+        component={Alimentacao}
         options={{
           title: "Cadastro de fazendas",
           drawerIcon: ({ focused, size, color }) => (
@@ -136,7 +151,7 @@ function Routes() {
       />
       <Drawer.Screen
         name="Contas"
-        component={PageLancavacas}
+        component={PagelancaContas}
         options={{
           title: "Produção e despesas",
           drawerIcon: ({ focused, size, color }) => (

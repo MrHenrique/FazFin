@@ -9,9 +9,9 @@ import {
 } from "react-native";
 import Header from "../../components/Header";
 import { scale, verticalScale } from "react-native-size-matters";
-import Modal from '../modalVacina/index'
+
 const { height, width } = Dimensions.get("window");
-function Manejo({ navigation }) {
+function Alimentacao ({ navigation }) {
   const imgbg1 = "../../../assets/bg10.jpg";
   return (
     <SafeAreaView style={styles.container}>
@@ -23,11 +23,10 @@ function Manejo({ navigation }) {
         >
           
           <Header title="Olá, Carlos" />
-          <Modal/> 
-          <Modal/>
+          
           <TouchableOpacity
             style={styles.botaopress}
-            onPress={() => navigation.navigate("PagelancaContas")}
+            onPress={() => navigation.navigate("PageLancavacas")}
           >
             <Text style={styles.tituloBotao}>{"Voltar"}</Text>
           </TouchableOpacity>
@@ -100,4 +99,4 @@ const styles = StyleSheet.create({
     color: "#fff",
   },
 });
-export default Manejo;
+export default Alimentacao;

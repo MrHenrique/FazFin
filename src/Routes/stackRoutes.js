@@ -7,11 +7,10 @@ import CadastroReb from "../pages/CadastroReb";
 import Manejo from "../pages/Manejo";
 import Leite from "../pages/Leite";
 import GeralReb from "../pages/GeralReb";
-import PageLancavacas from "../pages/PageLancavacas";
+import PagelancaContas from "../pages/PagelancaContas";
 import PageListavacas from "../pages/PageListavacas";
-import VacinaRem from "../pages/VacinaRem";
 import FinanceiroFaz from "../pages/FinanceiroFaz";
-import MaodeObra from "../pages/MaodeObra";
+import Alimentacao from "../pages/Alimentacao";
 const Stack = createNativeStackNavigator();
 function StackRoutes() {
   return (
@@ -66,8 +65,8 @@ function StackRoutes() {
         }}
       />
       <Stack.Screen
-      name="PageLancavacas"
-      component={PageLancavacas}
+      name="PagelancaContas"
+      component={PagelancaContas}
       options={{
         headerShown: false,
       }}
@@ -79,22 +78,16 @@ function StackRoutes() {
         headerShown: false,
       }}
     />
-    <Stack.Screen
-      name="VacinaRem"
-      component={VacinaRem}
-      options={{
-        headerShown: false,
-      }}
-    />
-      <Stack.Screen
+        <Stack.Screen
         name="FinanceiroFaz"
         component={FinanceiroFaz}
         options={{
           headerShown: false,
         }} />
-    <Stack.Screen
-      name="MaodeObra"
-      component={MaodeObra}
+    
+      <Stack.Screen
+      name="Alimentacao"
+      component={Alimentacao}
       options={{
         headerShown: false,
       }}/>
