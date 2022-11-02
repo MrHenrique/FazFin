@@ -64,20 +64,6 @@ function Routes() {
         }}
       />
       <Drawer.Screen
-        name="Alimentacao"
-        component={Alimentacao}
-        options={{
-          title: "Cadastro de fazendas",
-          drawerIcon: ({ focused, size, color }) => (
-            <Entypo
-              name={focused ? "address" : "address"}
-              size={size}
-              color={color}
-            />
-          ),
-        }}
-      />
-      <Drawer.Screen
         name="Visão geral de Fazenda"
         component={GeralFaz}
         options={{
@@ -186,6 +172,20 @@ function Routes() {
           drawerIcon: ({ focused, size, color }) => (
             <Fontisto
               name={focused ? "injection-syringe" : "injection-syringe"}
+              size={size}
+              color={color}
+            />
+          ),
+        }}
+      />
+      <Drawer.Screen
+        name="Alimentacao"
+        component={Alimentacao}
+        options={{
+          title: "Alimentacao",
+          drawerIcon: ({ focused, size, color }) => (
+            <Entypo
+              name={focused ? "address" : "address"}
               size={size}
               color={color}
             />
