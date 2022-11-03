@@ -32,3 +32,17 @@ export const rebanhos = [
     code: "3",
   },
 ];
+export const racao = [
+  {
+    name:"Sal",
+    code:"1",
+  },
+  {
+    name:"Ração",
+    code:"2",
+  },
+  {
+    name:"Volumoso",
+    code:"3",
+  },  
+]

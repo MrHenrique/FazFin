@@ -6,7 +6,7 @@ import {
     CampoTexto,
     
 } from "./styles.js";
-import { StyleSheet, View, TouchableOpacity, Text, ImageBackground, Dimensions } from "react-native";
+import { StyleSheet, View, TouchableOpacity, Text, Dimensions } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { scale, verticalScale } from "react-native-size-matters";
@@ -262,7 +262,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         alignSelf: "center",
-        top: verticalScale(75),
+        top: verticalScale(50),
         position: "absolute",
     },
     botaoPress3: {
@@ -273,7 +273,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         alignSelf: "center",
-        top: verticalScale(250),
+        top: verticalScale(220),
         position: "absolute",
     },
     botaoPress4: {
@@ -284,7 +284,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         alignSelf: "center",
-        top: verticalScale(425),
+        top: verticalScale(390),
         position: "absolute",
     },
     botaoPress5: {

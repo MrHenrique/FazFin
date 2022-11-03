@@ -2,42 +2,69 @@ import React from "react";
 import {
   Text,
   TouchableOpacity,
-  ImageBackground,
   StyleSheet,
   Dimensions,
   SafeAreaView,
+   
 } from "react-native";
+import { CampoTexto } from "./styles";
 import Header from "../../components/Header";
 import { scale, verticalScale } from "react-native-size-matters";
-
+import Select from "../../components/Select";
+import { racao } from "../../components/Select/data";
 const { height, width } = Dimensions.get("window");
 function Alimentacao ({ navigation }) {
-  const imgbg1 = "../../../assets/bg10.jpg";
+  
   return (
     <SafeAreaView style={styles.container}>
       
-        <ImageBackground
-          style={styles.imgbg}
-          source={require(imgbg1)}
-          imageStyle={{ opacity: 0.6 }}
-        >
-          
-          <Header title="Olá, Carlos" />
-          
+      <Header title="Olá, Carlos" />
+          <TouchableOpacity style={styles.botaoPress2}>
+            <Text style={styles.tituloBotao}>
+              Selecione o trato</Text>
+            <Select
+              touchableText="Selecione o trato"
+              title="Trato"
+              data={racao}
+              onSelect={(selectedItem, index) => {
+                console.log(selectedItem, index)
+              }}/>
+          </TouchableOpacity>
+         
+          <TouchableOpacity style={styles.botaoPress3}>
+            <Text style={styles.tituloBotao}>
+            {"Digite a quntidade sacos"}
+            </Text>
+            <CampoTexto placeholder=""></CampoTexto>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={styles.botaoPress4}>
+            <Text style={styles.tituloBotao}>
+            {"Valor por saco"}
+            </Text>
+            <CampoTexto placeholder=""></CampoTexto>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={styles.botaoPress5}>
+            <Text style={styles.tituloBotao}>
+            {"Consumo total do rebanho"}
+            </Text>
+            <CampoTexto placeholder=""></CampoTexto>
+            </TouchableOpacity>
           <TouchableOpacity
             style={styles.botaopress}
-            onPress={() => navigation.navigate("PageLancavacas")}
+            onPress={() => navigation.navigate("PagelancaContas")}
           >
             <Text style={styles.tituloBotao}>{"Voltar"}</Text>
           </TouchableOpacity>
-        </ImageBackground>
+        
     </SafeAreaView>
   );
 }
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#006773",
+    backgroundColor:"#00290C",
   },
   imgbg: {
     flex: 1,
@@ -48,7 +75,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     backgroundColor: "rgba(15, 109, 0, 0.9)",
     width: scale(300),
-    height: verticalScale(150),
+    height: verticalScale(100),
     alignItems: "center",
     justifyContent: "center",
     alignSelf: "center",
@@ -59,22 +86,33 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     backgroundColor: "rgba(15, 109, 0, 0.9)",
     width: scale(300),
-    height: verticalScale(150),
+    height: verticalScale(100),
     alignItems: "center",
     justifyContent: "center",
     alignSelf: "center",
-    top: verticalScale(250),
+    top: verticalScale(200),
     position: "absolute",
   },
   botaoPress4: {
     borderRadius: 20,
     backgroundColor: "rgba(15, 109, 0, 0.9)",
     width: scale(300),
-    height: verticalScale(150),
+    height: verticalScale(100),
     alignItems: "center",
     justifyContent: "center",
     alignSelf: "center",
-    top: verticalScale(425),
+    top: verticalScale(330),
+    position: "absolute",
+  },
+  botaoPress5: {
+    borderRadius: 20,
+    backgroundColor: "rgba(15, 109, 0, 0.9)",
+    width: scale(300),
+    height: verticalScale(100),
+    alignItems: "center",
+    justifyContent: "center",
+    alignSelf: "center",
+    top: verticalScale(460),
     position: "absolute",
   },
   tituloBotao2: {
@@ -98,5 +136,6 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#fff",
   },
+  
 });
 export default Alimentacao;
