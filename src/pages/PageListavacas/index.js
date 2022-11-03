@@ -28,7 +28,7 @@ function PageListavacas({ navigation }) {
                     <SearchBar
                         setChange={(data) => setBarrapesquisa(data)}
                     />
-                    <Lista_vacas />
+                    <Lista_vacas textobarrapesquisa={Barrapesquisa} />
                     <View style={styles.contvoltar}>
                         <TouchableOpacity style={styles.botaovoltar} onPress={() => navigation.navigate("GeralReb")}>
                             <Text style={styles.textovoltar}>Voltar</Text>

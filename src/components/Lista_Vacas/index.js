@@ -19,10 +19,35 @@ const windowHeight = Dimensions.get("window").height;
 const ScreenWidth = Dimensions.get("screen").width;
 const ScreenHeight = Dimensions.get("screen").height;
 
-function Lista_vacas() {
+function Lista_vacas({ textobarrapesquisa }) {
+  const [List, setList] = useState(dataVacas);
+  const [Searchtext, setSearchtext] = useState('');
+
   const [isModalVisible, setModalVisible] = useState(false);
   const [isInfoeditable, setisInfoeditable] = useState(false);
   const [Details, setDetails] = useState([]);
+
+  useEffect(() => {
+    setSearchtext(textobarrapesquisa)
+  }, [textobarrapesquisa]);
+
+  useEffect(() => {
+    setSearchtext(textobarrapesquisa)
+    if (Searchtext === '') {
+      setList(dataVacas);
+    } else {
+      setList(
+        dataVacas.filter(item => {
+          if (item.name.toLowerCase().indexOf(Searchtext.toLowerCase()) > -1 || item.etiqueta.toLowerCase().indexOf(Searchtext.toLowerCase()) > -1) {
+            return true;
+          } else {
+            return false;
+          }
+        })
+      );
+    }
+  }, [Searchtext]);
+
 
   function toggleModal() {
     setModalVisible(!isModalVisible);
@@ -63,10 +88,10 @@ function Lista_vacas() {
               <View style={styles.containermodal}>
                 {/*NOME DA VACA E IMAGEM*/}
                 <View style={styles.Vacaavatar}>
-                <TextInput
-                  style={styles.textavatar}
-                  value={Details.name}
-                  editable={isInfoeditable}/>
+                  <TextInput
+                    style={styles.textavatar}
+                    value={Details.name}
+                    editable={isInfoeditable} />
                   <MaterialCommunityIcons name="cow" size={verticalScale(60)} color="white" />
                 </View>
                 {/*Sexo*/}
@@ -132,7 +157,7 @@ function Lista_vacas() {
         </Modal>
       </View>
       <FlatList
-        data={dataVacas}
+        data={List}
         keyExtractor={(item) => item.id}
         renderItem={({ item, index }) => (
           <View style={styles.containerVacas}>
@@ -203,12 +228,12 @@ const styles = StyleSheet.create({
     fontSize: scale(20),
     color: "white",
   },
-    containerinfos: {
-      marginTop: verticalScale(10),
-      padding: scale(10),
-      backgroundColor: "rgba(15, 109, 0, 0.7)",
-      borderRadius: scale(8),
-    },
+  containerinfos: {
+    marginTop: verticalScale(10),
+    padding: scale(10),
+    backgroundColor: "rgba(15, 109, 0, 0.7)",
+    borderRadius: scale(8),
+  },
 
   botaovoltar: {
     backgroundColor: "rgba(15, 109, 0, 0.9)",
