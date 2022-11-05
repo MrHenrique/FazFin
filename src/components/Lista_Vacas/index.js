@@ -27,10 +27,11 @@ function Lista_vacas({ textobarrapesquisa }) {
   const [isInfoeditable, setisInfoeditable] = useState(false);
   const [Details, setDetails] = useState([]);
 
+  {/*Verifica a barra de pesquisa e salva na state*/ }
   useEffect(() => {
     setSearchtext(textobarrapesquisa)
   }, [textobarrapesquisa]);
-
+  {/*Verifica o state da barra de pesquisa, se ouver mudanca atualiza a lista*/ }
   useEffect(() => {
     setSearchtext(textobarrapesquisa)
     if (Searchtext === '') {
